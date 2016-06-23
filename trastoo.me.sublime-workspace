@@ -1,0 +1,323 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mongo",
+				"mongodb"
+			],
+			[
+				"pro",
+				"provincia"
+			],
+			[
+				"pr",
+				"proveedor"
+			],
+			[
+				"prom",
+				"promo"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"user",
+				"userRouter"
+			],
+			[
+				"get",
+				"getById"
+			],
+			[
+				"getB",
+				"getByName"
+			],
+			[
+				"api",
+				"apiRoutes"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 524,
+				"line_ending": "Windows",
+				"name": "package.json"
+			}
+		},
+		{
+			"contents": "var http = require('http');\nvar dispatcher = require('httpdispatcher');\n\nconst PORT=2007; \n\nfunction handleRequest(request, response){\n    try {\n        //log the request on console\n        console.log(request.url);\n        //Disptach\n        dispatcher.dispatch(request, response);\n    } catch(err) {\n        console.log(err);\n    }\n}\n\ndispatcher.setStatic('resources');\n\n//A sample GET request    	\ndispatcher.onGet(\"/page1\", function(req, res) {\n    res.writeHead(200, {'Content-Type': 'text/plain'});\n    res.end('Page One');\n});    \n\n//A sample POST request\ndispatcher.onPost(\"/post1\", function(req, res) {\n    res.writeHead(200, {'Content-Type': 'text/plain'});\n    res.end('Got Post Data');\n});\n\n/*\nfunction handleRequest(request, response){\n    response.end('It Works!! Path Hit: ' + request.url);\n}\n*/\nvar server = http.createServer(handleRequest);\nserver.listen(PORT, function(){\n    //Callback triggered when server is successfully listening. Hurray!\n    console.log(\"Server listening on: http://localhost:%s\", PORT);\n});",
+			"file": "server.js",
+			"file_size": 1070,
+			"file_write_time": 131111618605531590,
+			"settings":
+			{
+				"buffer_size": 1032,
+				"line_ending": "Windows",
+				"name": "server.js"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/mine/trastoome_old/package.json",
+		"/D/mine/trastoome/config/security.js",
+		"/D/mine/trastoome/test/config/test-config.js",
+		"/D/mine/trastoome/test/create_accounts_spec.js",
+		"/D/mine/trastoome/app/routes.js",
+		"/D/mine/trastoome/server.js",
+		"/D/mine/trastoome/package.json",
+		"/D/mine/trastooo/package.json",
+		"/D/mine/trastooo/app/model/user.js",
+		"/D/mine/trastooo/app/model/promo.js",
+		"/D/mine/trastooo/app/routes/mailRoutes.js",
+		"/D/mine/trastooo/app/routes/promoRoutes.js",
+		"/D/mine/trastooo/app/routes/userRoutes.js",
+		"/D/mine/trastooo/angular/core.js",
+		"/D/mine/trastooo/angular/index.html",
+		"/D/mine/trastooo/server.js",
+		"/D/mine/trastooo/app/adminRoutes.js",
+		"/D/mine/trastooo/app/userRoutes.js",
+		"/D/mine/trastooo/app/basicRoutes.js",
+		"/D/mine/trastooo/app/controllers/promoController.js",
+		"/D/mine/trastooo/app/controllers/basicController.js",
+		"/D/mine/trastooo/app/controllers/userController.js",
+		"/D/mine/trastooo/app/controllers/adminController.js",
+		"/D/mine/trastooo/app/controller/adminController.js",
+		"/D/mine/trastooo/app/controller/basicController.js",
+		"/D/mine/trastooo/app/controller/userController.js",
+		"/D/mine/trastooo/app/model/adminRoutes.js",
+		"/D/mine/trastooo/index.html",
+		"/D/mine/trastooo/node_modules/server.js",
+		"/D/mine/trastooo/app/models/user.js",
+		"/D/mine/trastooo/config/database.js",
+		"/D/mine/trastooo/config/passport.js",
+		"/D/mine/trastooo/public/index.html",
+		"/D/mine/trastooo/public/main.js",
+		"/D/mine/blogjs-master/api/package.json",
+		"/D/mine/blogjs-master/package.json",
+		"/D/mine/blogjs-master/api/npm-debug.log",
+		"/D/mine/trastooo/public/css/bootstrap.min.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"});",
+			"userRouter",
+			"id",
+			"();\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								515
+							]
+						],
+						"settings":
+						{
+							"auto_name": "package.json",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
+								400
+							]
+						],
+						"settings":
+						{
+							"auto_name": "server.js",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "trastoo.me.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
