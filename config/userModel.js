@@ -12,5 +12,4 @@ var userSchema = mongoose.Schema({
  	 favs : Array
 });  
 
-mongoose.connect('mongodb://localhost:27017/trastooo'); 
 module.exports = mongoose.model('users', userSchema);

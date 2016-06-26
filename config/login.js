@@ -2,7 +2,7 @@ var crypto = require('crypto');
 var rand = require('csprng'); 
 var mongoose = require('mongoose'); 
 var gravatar = require('gravatar'); 
-var user = require('../config/models');  
+var user = require('../config/userModel');  
 
 exports.login = function(email,password,callback) {  
 
@@ -18,6 +18,9 @@ var hashed_password = crypto.createHash('sha512').update(newpass).digest("hex");
 var grav_url = gravatar.url(email, {s: '200', r: 'pg', d: '404'}); 
 if(hash_db == hashed_password){  
 //Hay que actualizar el ultimo login del usuario
+user.findOne({ token: id }, function (err, doc){   
+     doc.lastLogin = new Date();
+     doc.save();});
 callback({'response':"Login Sucess",'res':true,'token':id,'grav':grav_url});  
 
 }else{  
