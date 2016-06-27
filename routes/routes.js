@@ -7,26 +7,26 @@ var user2promo = require('../config/user2promo');
 
 module.exports = function(app) {        
 
-
+//ruta de entrada
      app.get('/', function(req, res) {       
 
           res.end("Trastoo.me Node-Android-Project");    
      });
-
+//listado de promociones activas en la plataforma
      app.get('/promo', function(req, res) {       
      	promo.listPromos(function(found){
      		console.log(found);
      		res.json(found);
      	});
      });
-
+//detalle de una promocion dado un id
      app.get('/promo/:idPromo', function(req, res) {       
           promo.getPromo(req.params.idPromo,function(found){
                console.log(found);
                res.json(found);
           });
      });
-
+//alta de promocion en el sistema
 	app.post('/promo',function(req,res){         
 		var description = req.body.description;
 		var title = req.body.title;
@@ -43,6 +43,7 @@ module.exports = function(app) {
              res.json(found);    
      	});     
      }); 
+//login en la app con hash en la pwd     
      app.post('/login',function(req,res){        
           var email = req.body.email;             
           var password = req.body.password;       
@@ -52,7 +53,7 @@ module.exports = function(app) {
                res.json(found);    
      });    
      });     
-
+//registro de un nuevo usuario en la plataforma
      app.post('/register',function(req,res){         
           var email = req.body.email;             
           var password = req.body.password;       
@@ -62,6 +63,7 @@ module.exports = function(app) {
                res.json(found);    
      });     
      });     
+//añade una promocion como favorita para un usuario     
      app.post('/user/favPromo',function(req,res){
      	var idPromo = req.body.idPromo;
      	var idUser = req.body.idUser;
@@ -70,7 +72,7 @@ module.exports = function(app) {
      		res.json(found);
      	});
      });
-
+//elimina las promociones de favoritos de un usuario
      app.post('/user/unfavPromo',function(req,res){
      	var idPromo = req.body.idPromo;
      	var idUser = req.body.idUser;
@@ -79,7 +81,7 @@ module.exports = function(app) {
      		res.json(found);
      	});
      });
-
+//obtiene las promociones favoritas de un usuario
      app.post('/user/favs',function(req,res){
           var idUser = req.body.idUser;
           user.listaFavs(idUser,function(found){
@@ -91,6 +93,7 @@ module.exports = function(app) {
          
           });
      });
+//añade una promocion a las vistas por un usuario     
       app.get('/promo/:idpromo/:iduser',function(req,res){        
           var promo = req.params.idpromo;             
           var user = req.params.iduser;       
@@ -99,13 +102,14 @@ module.exports = function(app) {
                res.json(found);    
      });    
      });   
-     
+//obtiene el detalle de un usuario dado un id     
      app.get('/user/:idUser', function(req, res) {       
           user.userDetail(req.params.idUser,function(found){
                console.log(found);
                res.json(found);
           });
      });
+//peticion de cambio de contraseña     
      app.post('/api/chgpass', function(req, res) {       
           var id = req.body.id;                 
           var opass = req.body.oldpass;         
@@ -116,7 +120,7 @@ module.exports = function(app) {
                res.json(found);    
      });     
      });     
-
+//peticion de reseteo de contraseña de un usuario
      app.post('/api/resetpass', function(req, res) {         
 
           var email = req.body.email;         
@@ -126,7 +130,7 @@ module.exports = function(app) {
                res.json(found);    
      });     
      });     
-
+//reseteo de la contraseña paso 2
      app.post('/api/resetpass/chg', function(req, res) {         
           var email = req.body.email;         
           var code = req.body.code;       
