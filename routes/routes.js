@@ -4,13 +4,13 @@ var login = require('../config/login');
 var promo = require('../config/promo');  
 var user = require('../config/user');
 var user2promo = require('../config/user2promo');
+var path = require("path");
 
 module.exports = function(app) {        
 
 //ruta de entrada
      app.get('/', function(req, res) {       
-
-          res.end("Trastoo.me Node-Android-Project");    
+          res.sendFile(path.join(__dirname + '/index.html'));
      });
 //listado de promociones activas en la plataforma
      app.get('/promo', function(req, res) {       
