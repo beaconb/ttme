@@ -1,0 +1,95 @@
+Category collection
+{
+    "_id": ObjectId("523b1153a2aa6a3233a913f8"),
+    "requiresAuthentication": false,
+    "modifiedDate": ISODate("2014-08-29T17:40:22Z"),
+    "permanentlyRemoved": false,
+    "feedURL": "http://feeds.feedburner.com/eater/nyc",
+    "title": "Eater NY",
+    "bozoBitSet": false,
+    "enabled": true,
+    "etag": "4bL78iLSZud2iXd/vd10mYC32BE",
+    "link": "http://ny.eater.com/",
+    "permanentRedirectURL": null,
+    "description": "The New York City Restaurant, Bar, and Nightlife Blog”
+}
+Provider collection
+{
+    "_id": ObjectId("523b1153a2aa6a3233a913f8"),
+    "requiresAuthentication": false,
+    "modifiedDate": ISODate("2014-08-29T17:40:22Z"),
+    "permanentlyRemoved": false,
+    "feedURL": "http://feeds.feedburner.com/eater/nyc",
+    "title": "Eater NY",
+    "bozoBitSet": false,
+    "enabled": true,
+    "etag": "4bL78iLSZud2iXd/vd10mYC32BE",
+    "link": "http://ny.eater.com/",
+    "permanentRedirectURL": null,
+    "description": "The New York City Restaurant, Bar, and Nightlife Blog”
+}
+Promo Collection
+{
+ description: String,
+ title: String,
+ summary: String,
+ publishedDate: Date,
+ fromDate: Date,
+ toDate: Date,
+ link: String,
+ categoryID: Schema.Types.ObjectId,
+ providerID: Schema.Types.ObjectId
+}
+
+user collection
+{
+ token : String,
+ active: Boolean,     
+ email: String,  
+ hashed_password: String,    
+ salt : String,  
+ temp_str:String,
+ lastLogin : Date,
+ created : Date,
+ favs : Array
+}
+user2promos collection
+{
+ read : boolean,
+ user_id : ObjectId,
+ promo_id : ObjectId
+}
+
+
+------------------------------------------------------------------------------------------------
+
+User Entity: crear, ver, resetear pwd, favoritear promo, suscribir categoria, suscribir proveedor
+Promo Entity: crear(crear, asociar a una categoria, asociar a un proveedor)
+User2Promo Entity: promo vista por usuario
+Category Entity: crear
+Provider Entity: crear
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ruta								Verb 									Description 									Variables
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+user/enroll							POST							Dar de alta un usuario							Fname, Lname, Email, pwd
+user/unenroll						DELETE							Dar de baja un usuario							email
+user/resetPwd						PUT								Resetear la contraseña							email
+user/{idUsuario}					GET								Detalle del usuario - perfil					idUsuario
+user								GET								Lista todos los usuarios de la app				
+user/promo							GET								Lista de promos favoritas del usuario			idUsuario
+user/promo/{idPromo}				POST							Añade una entrada en la colección de vistas		idUsuario, idPromo
+user/promo/fav						PUT								Añade una promo a los favoritos del usuario		idPromo, idUsuario
+user/promo/unfav					PUT								Elimina una promo de los favoritos del usuario  idPromo, idUsuario
+promo								GET								Lista todas las promociones disponibles			
+promo								POST							Añade una promoción al sistema					valores de la promoCollection
+promo/{idPromo}						GET								Obtiene el detalle de una promocion				idPromo
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+https://www.mongodb.com/blog/post/building-your-first-application-mongodb-creating-rest-api-using-mean-stack-part-2
+
