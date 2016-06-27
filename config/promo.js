@@ -30,3 +30,8 @@ exports.addPromo = function(description,title,summary,publishedDate,fromDate,toD
 
 	}); 
 }
+exports.getPromos = function(ids,callback){
+	promo.find({"_id":{$in:ids}},function(err,docs){
+		callback({docs});
+	});
+}

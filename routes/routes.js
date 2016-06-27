@@ -72,6 +72,18 @@ module.exports = function(app) {
      	});
      });
 
+     app.post('/user/favs',function(req,res){
+          var idUser = req.body.idUser;
+          user.listaFavs(idUser,function(found){
+               console.log(found);
+          promo.getPromos(found.arrayFav,function(encuentra){
+               console.log(encuentra);
+                res.json(encuentra);
+          });     
+         
+          });
+     });
+
      app.post('/api/chgpass', function(req, res) {       
           var id = req.body.id;                 
           var opass = req.body.oldpass;         

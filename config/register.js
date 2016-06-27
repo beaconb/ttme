@@ -6,7 +6,6 @@ var user = require('../config/userModel');
 exports.register = function(email,password,callback) {  
 
 var x = email; 
-console.log('pasa por aqui con valores x: '+x+'-'+password);
 if(x.indexOf("@")!= -1){ 
 if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/) && password.length > 4 && password.match(/[0-9]/) && password.match(/.[!,@,#,$,%,^,&,*,?,_,~]/)) {  
 
