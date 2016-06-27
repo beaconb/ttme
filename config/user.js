@@ -1,6 +1,5 @@
 var mongoose = require('mongoose'); 
 var user = require('../config/userModel');
-var promo = require('../config/promoModel');  
 
 exports.favPromo = function(promoID,userID,callback){
 	
@@ -42,5 +41,10 @@ exports.listaFavs = function(userID,callback){
 	user.findOne({ token: userID }, function (err, doc){
 		 var arrayFav = doc.favs;
 		callback({arrayFav});
+	});
+};
+exports.userDetail = function(userID, callback){
+	user.findOne({ token: userID }, function (err, doc){
+		callback({doc});
 	});
 };

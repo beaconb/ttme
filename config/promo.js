@@ -35,3 +35,8 @@ exports.getPromos = function(ids,callback){
 		callback({docs});
 	});
 }
+exports.getPromo = function(id,callback){
+	promo.findOne({_id:id},function(err,docs){
+		callback({docs});
+	});
+}

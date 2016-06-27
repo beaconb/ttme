@@ -3,6 +3,7 @@ var register = require('../config/register');
 var login = require('../config/login');   
 var promo = require('../config/promo');  
 var user = require('../config/user');
+var user2promo = require('../config/user2promo');
 
 module.exports = function(app) {        
 
@@ -17,7 +18,14 @@ module.exports = function(app) {
      		console.log(found);
      		res.json(found);
      	});
-     });     
+     });
+
+     app.get('/promo/:idPromo', function(req, res) {       
+          promo.getPromo(req.params.idPromo,function(found){
+               console.log(found);
+               res.json(found);
+          });
+     });
 
 	app.post('/promo',function(req,res){         
 		var description = req.body.description;
@@ -83,7 +91,21 @@ module.exports = function(app) {
          
           });
      });
-
+      app.get('/promo/:idpromo/:iduser',function(req,res){        
+          var promo = req.params.idpromo;             
+          var user = req.params.iduser;       
+          user2promo.viewedPromo(promo,user,function (found) {           
+               console.log(found);             
+               res.json(found);    
+     });    
+     });   
+     
+     app.get('/user/:idUser', function(req, res) {       
+          user.userDetail(req.params.idUser,function(found){
+               console.log(found);
+               res.json(found);
+          });
+     });
      app.post('/api/chgpass', function(req, res) {       
           var id = req.body.id;                 
           var opass = req.body.oldpass;         
