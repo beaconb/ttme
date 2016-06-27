@@ -16,6 +16,7 @@ var hashed_password = crypto.createHash('sha512').update(newpass).digest("hex");
 
 var newuser = new user({    
      token: token,   
+     active: true,
      email: email,   
      hashed_password: hashed_password,   
      salt :temp,
