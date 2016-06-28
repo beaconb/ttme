@@ -23,6 +23,7 @@
 		"frisby" : "~0.8.3",
 		"jasmine-node" : "~1.14.5",
 		"async" : "~0.9.0",
-		"httpdispatcher":"~1.0.0"
+		"httpdispatcher":"~1.0.0",
+		"ejs":"~0.8.3"
     }
 }

@@ -10,7 +10,7 @@ module.exports = function(app) {
 
 //ruta de entrada
      app.get('/', function(req, res) {       
-          res.sendFile(path.join(__dirname + '/index.html'));
+          res.sendFile(path.join(__dirname + '/login.html'));
      });
 //listado de promociones activas en la plataforma
      app.get('/promo', function(req, res) {       
@@ -49,8 +49,19 @@ module.exports = function(app) {
           var password = req.body.password;       
 
           login.login(email,password,function (found) {           
-               console.log(found);             
-               res.json(found);    
+          promo.listPromos(function(encontrado){
+               res.render("pages/home");
+               /*res.render(encontrado);
+               var ejs = require('ejs')
+               , fs = require('fs')
+               , str = fs.readFileSync(__dirname + '/ejs/list.ejs', 'utf8');
+
+               var ret = ejs.render(str, {docs:encontrado});
+
+               console.log(ret);
+               res.json(ret);
+               */
+          });
      });    
      });     
 //registro de un nuevo usuario en la plataforma
@@ -142,4 +153,10 @@ module.exports = function(app) {
      
      });     
      });  
+     app.get('/about', function(req, res) { 
+          res.render("pages/about");
+     });
+      app.get('/home', function(req, res) { 
+          res.render("pages/home");
+     });
 };

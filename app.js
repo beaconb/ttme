@@ -13,6 +13,8 @@ app.use(connect.json());
 app.use(connect.urlencoded());  
 // Routes  
 
+app.set('view engine', 'ejs');
+
 require('./routes/routes.js')(app);  
 
 app.listen(PORT);  
