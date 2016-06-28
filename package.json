@@ -8,6 +8,7 @@
         "crypto":"~0.0.3",      
         "gravatar":"~1.0.6",
 		"express" : "~4.10.0",
+		"express-session": "^1.7.6",
 		"stormpath" : "~0.7.5", 
 		"express-stormpath" : "~0.5.9",
 		"mongodb" : "~1.4.26", 
