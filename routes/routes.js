@@ -15,18 +15,28 @@ module.exports = function(app) {
           //res.sendFile(path.join(__dirname + '/login.html'));
      });
 //listado de promociones activas en la plataforma
-     app.get('/promo', function(req, res) {       
+     app.get('/promo', function(req, res) {    
+      sess=req.session; 
+          if (sess.hash){   
      	promo.listPromos(function(found){
      		console.log(found);
      		res.json(found);
      	});
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }
      });
 //detalle de una promocion dado un id
      app.get('/promo/:idPromo', function(req, res) {       
-          promo.getPromo(req.params.idPromo,function(found){
-               console.log(found);
-               res.json(found);
-          });
+          sess=req.session; 
+          if (sess.hash){
+               promo.getPromo(req.params.idPromo,function(found){
+                    console.log(found);
+                    res.json(found);
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }
      });
 //alta de promocion en el sistema
 	app.post('/promo',function(req,res){         
@@ -53,25 +63,15 @@ var sess;
           var password = req.body.password;       
 
           login.login(email,password,function (found) {           
-             
+        
 
-               //In this we are assigning email to sess.email variable.
-               //email comes from HTML page.
-               sess.hash=found.token;
-               console.log("sessionHash: "+sess.hash);
-               promo.listPromos(function(encontrado){
-               var resultado = encontrado;
-               res.render("pages/home",{resultado:encontrado});
-               /*res.render(encontrado);
-               var ejs = require('ejs')
-               , fs = require('fs')
-               , str = fs.readFileSync(__dirname + '/ejs/list.ejs', 'utf8');
-
-               var ret = ejs.render(str, {docs:encontrado});
-
-               console.log(ret);
-               res.json(ret);
-               */
+          //In this we are assigning email to sess.email variable.
+          //email comes from HTML page.
+          sess.hash=found.token;
+          console.log("sessionHash: "+sess.hash);
+          promo.listPromos(function(encontrado){
+          var resultado = encontrado;
+          res.render("pages/home",{resultado:encontrado});
           });
      });    
      });     
