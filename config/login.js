@@ -22,7 +22,7 @@ user.findOne({ token: id }, function (err, doc){
      doc.lastLogin = new Date();
      doc.save();});
 
-callback({'response':"Login Sucess",'res':true,'token':id,'grav':grav_url});  
+callback({'response':"Login Sucess",'res':true,'token':id,'grav':grav_url,'email':email});  
 
 }else{  
 

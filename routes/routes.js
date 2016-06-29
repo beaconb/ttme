@@ -76,7 +76,8 @@ var sess;
           console.log("sessionHash: "+sess.hash);
           promo.listPromos(function(encontrado){
           var resultado = encontrado;
-          res.render("pages/home",{resultado:encontrado});
+          var perfil = found;
+          res.render("pages/home",{resultado:encontrado,perfil:found});
           });
      });    
      });     
@@ -150,12 +151,12 @@ var sess;
           }  
      });   
 //obtiene el detalle de un usuario dado un id     
-     app.get('/user/:idUser', function(req, res) {
+     app.get('/user', function(req, res) {
           sess=req.session; 
           if (sess.hash){       
-               user.userDetail(req.params.idUser,function(found){
+               user.userDetail(sess.hash,function(found){
                     console.log(found);
-                    res.json(found);
+                    res.render('pages/user',{perfil:found});
                });
           }else{
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});

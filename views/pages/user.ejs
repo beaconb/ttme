@@ -14,16 +14,10 @@
             <div class="col-sm-8">
             
                 <div class="jumbotron">
-                    <h1>Promociones destacadas</h1>
-
-					<ul>
-					    <% resultado.docs.forEach(function(doc) { %>
-					        <li>Title - <%= doc.title %>
-					        Header - <%= doc.summary %>
-					        Description - <%= doc.description %>
-					        Url - <%= doc.link %></li>
-					    <% }); %>
-					</ul>
+                    <h1>Perfil del cliente</h1>
+				    <%= perfil.doc.email%>
+				    <%= perfil.doc.created%>
+				    <%= perfil.doc.favs%>
                 </div>
                 
             </div>
@@ -31,7 +25,7 @@
                 
                 <div class="well">
                     <h3>Look I'm A Sidebar!</h3>
-                    <a href="http://localhost:2007/user"><%= perfil.email%></a>
+                    <a href="/"><%= perfil.email%></a>
                 </div>
 
             </div>
