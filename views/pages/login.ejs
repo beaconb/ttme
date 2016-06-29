@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+    <main>
+     <div class="jumbotron" style="padding-bottom:0px;">
+        <h2>trastoo.me</h2>
+    </div>
+        <form action="http://localhost:2007/login" method="POST">
+			Email <input type="text" id="email" name="email"/>
+			Password <input type="password" id="password" name="password"/>
+			<button onclick="submit();">Enviar</button>
+		</form>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    
+</body>
+</html>

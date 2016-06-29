@@ -2,7 +2,7 @@ var crypto = require('crypto');
 var rand = require('csprng'); 
 var mongoose = require('mongoose'); 
 var gravatar = require('gravatar'); 
-var user = require('../config/userModel');  
+var user = require('../config/userModel');
 
 exports.login = function(email,password,callback) {  
 
@@ -21,6 +21,7 @@ if(hash_db == hashed_password){
 user.findOne({ token: id }, function (err, doc){   
      doc.lastLogin = new Date();
      doc.save();});
+
 callback({'response':"Login Sucess",'res':true,'token':id,'grav':grav_url});  
 
 }else{  

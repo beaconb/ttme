@@ -5,12 +5,14 @@ var promo = require('../config/promo');
 var user = require('../config/user');
 var user2promo = require('../config/user2promo');
 var path = require("path");
+var session = require('express-session');
 
 module.exports = function(app) {        
-
+     app.use(session({secret: 'ssshhhhh'}));
 //ruta de entrada
      app.get('/', function(req, res) {       
-          res.sendFile(path.join(__dirname + '/login.html'));
+          res.render("pages/login");
+          //res.sendFile(path.join(__dirname + '/login.html'));
      });
 //listado de promociones activas en la plataforma
      app.get('/promo', function(req, res) {       
@@ -43,14 +45,23 @@ module.exports = function(app) {
              res.json(found);    
      	});     
      }); 
+var sess;
 //login en la app con hash en la pwd     
-     app.post('/login',function(req,res){        
+     app.post('/login',function(req,res){    
+          sess=req.session;    
           var email = req.body.email;             
           var password = req.body.password;       
 
           login.login(email,password,function (found) {           
-          promo.listPromos(function(encontrado){
-               res.render("pages/home");
+             
+
+               //In this we are assigning email to sess.email variable.
+               //email comes from HTML page.
+               sess.hash=found.token;
+               console.log("sessionHash: "+sess.hash);
+               promo.listPromos(function(encontrado){
+               var resultado = encontrado;
+               res.render("pages/home",{resultado:encontrado});
                /*res.render(encontrado);
                var ejs = require('ejs')
                , fs = require('fs')
@@ -158,5 +169,14 @@ module.exports = function(app) {
      });
       app.get('/home', function(req, res) { 
           res.render("pages/home");
+     });
+     app.get('/logout',function(req,res){
+          req.session.destroy(function(err) {
+            if(err) {
+              console.log(err);
+            } else {
+              res.redirect('/');
+            }
+          });
      });
 };

@@ -15,7 +15,15 @@
             
                 <div class="jumbotron">
                     <h1>This is great</h1>
-                    <p>Welcome to templating using EJS</p>
+
+					<ul>
+					    <% resultado.docs.forEach(function(doc) { %>
+					        <li>Title - <%= doc.title %>
+					        Header - <%= doc.summary %>
+					        Description - <%= doc.description %>
+					        Url - <%= doc.link %></li>
+					    <% }); %>
+					</ul>
                 </div>
                 
             </div>
