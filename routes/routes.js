@@ -39,7 +39,9 @@ module.exports = function(app) {
           }
      });
 //alta de promocion en el sistema
-	app.post('/promo',function(req,res){         
+	app.post('/promo',function(req,res){
+     sess=req.session; 
+     if (sess.hash){         
 		var description = req.body.description;
 		var title = req.body.title;
 		var summary = req.body.summary;
@@ -53,7 +55,10 @@ module.exports = function(app) {
         promo.addPromo(description,title,summary,publishedDate,fromDate,toDate,link,categoryID,providerID, function (found) {             
              console.log(found);             
              res.json(found);    
-     	});     
+     	});
+     }else{
+          res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+     }     
      }); 
 var sess;
 //login en la app con hash en la pwd     
@@ -87,49 +92,74 @@ var sess;
      });     
 //añade una promocion como favorita para un usuario     
      app.post('/user/favPromo',function(req,res){
-     	var idPromo = req.body.idPromo;
-     	var idUser = req.body.idUser;
-     	user.favPromo(idPromo, idUser, function(found){
-     		console.log(found);
-     		res.json(found);
-     	});
+          sess=req.session; 
+          if (sess.hash){ 
+          	var idPromo = req.body.idPromo;
+          	var idUser = sess.hash;
+          	user.favPromo(idPromo, idUser, function(found){
+          		console.log(found);
+          		res.json(found);
+          	});
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }  
      });
 //elimina las promociones de favoritos de un usuario
      app.post('/user/unfavPromo',function(req,res){
-     	var idPromo = req.body.idPromo;
-     	var idUser = req.body.idUser;
-     	user.unfavPromo(idPromo, idUser, function(found){
-     		console.log(found);
-     		res.json(found);
-     	});
+          sess=req.session; 
+          if (sess.hash){ 
+          	var idPromo = req.body.idPromo;
+          	var idUser = sess.hash;
+          	user.unfavPromo(idPromo, idUser, function(found){
+          		console.log(found);
+          		res.json(found);
+          	});
+           }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }  
      });
 //obtiene las promociones favoritas de un usuario
-     app.post('/user/favs',function(req,res){
-          var idUser = req.body.idUser;
-          user.listaFavs(idUser,function(found){
-               console.log(found);
-          promo.getPromos(found.arrayFav,function(encuentra){
-               console.log(encuentra);
-                res.json(encuentra);
-          });     
+     app.get('/user/favs',function(req,res){
+          sess=req.session; 
+          if (sess.hash){ 
+               var idUser = sess.hash;
+               user.listaFavs(idUser,function(found){
+                    console.log(found);
+               promo.getPromos(found.arrayFav,function(encuentra){
+                    console.log(encuentra);
+                     res.json(encuentra);
+               });     
          
-          });
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }
      });
 //añade una promocion a las vistas por un usuario     
-      app.get('/promo/:idpromo/:iduser',function(req,res){        
-          var promo = req.params.idpromo;             
-          var user = req.params.iduser;       
-          user2promo.viewedPromo(promo,user,function (found) {           
-               console.log(found);             
-               res.json(found);    
-     });    
+      app.get('/user/promo/:idpromo',function(req,res){     
+          sess=req.session; 
+          if (sess.hash){    
+               var promo = req.params.idpromo;             
+               var user = sess.hash;       
+               user2promo.viewedPromo(promo,user,function (found) {           
+                    console.log(found);             
+                    res.json(found);    
+               }); 
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }  
      });   
 //obtiene el detalle de un usuario dado un id     
-     app.get('/user/:idUser', function(req, res) {       
-          user.userDetail(req.params.idUser,function(found){
-               console.log(found);
-               res.json(found);
-          });
+     app.get('/user/:idUser', function(req, res) {
+          sess=req.session; 
+          if (sess.hash){       
+               user.userDetail(req.params.idUser,function(found){
+                    console.log(found);
+                    res.json(found);
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }    
      });
 //peticion de cambio de contraseña     
      app.post('/api/chgpass', function(req, res) {       
