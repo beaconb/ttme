@@ -88,7 +88,7 @@ var sess;
 
           register.register(email,password,function (found) {             
                console.log(found);             
-               res.json(found);    
+               res.render('pages/login');    
      });     
      });     
 //añade una promocion como favorita para un usuario     
@@ -198,6 +198,9 @@ var sess;
      });  
      app.get('/about', function(req, res) { 
           res.render("pages/about");
+     });
+     app.get('/newUser', function(req, res) { 
+          res.render("pages/newUser");
      });
      app.get('/home', function(req, res) { 
           sess=req.session; 
