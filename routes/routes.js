@@ -156,6 +156,7 @@ var sess;
           if (sess.hash){       
                user.userDetail(sess.hash,function(found){
                     console.log(found);
+                     var perfil = found;
                     res.render('pages/user',{perfil:found});
                });
           }else{
@@ -198,8 +199,21 @@ var sess;
      app.get('/about', function(req, res) { 
           res.render("pages/about");
      });
-      app.get('/home', function(req, res) { 
-          res.render("pages/home");
+     app.get('/home', function(req, res) { 
+          sess=req.session; 
+          if (sess.hash){       
+               user.userDetail(sess.hash,function(found){
+                console.log(found);
+                promo.listPromos(function(encontrado){
+                var resultado = encontrado;
+                var perfil = found;
+                res.render("pages/home",{resultado:encontrado,perfil:found});
+          });
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }    
+          
      });
      app.get('/logout',function(req,res){
           req.session.destroy(function(err) {

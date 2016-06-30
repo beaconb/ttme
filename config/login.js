@@ -20,9 +20,11 @@ if(hash_db == hashed_password){
 //Hay que actualizar el ultimo login del usuario
 user.findOne({ token: id }, function (err, doc){   
      doc.lastLogin = new Date();
-     doc.save();});
+     doc.save();
+ 	 callback({'response':"Login Sucess",'res':true,'token':id,'grav':grav_url,'email':email,'doc':doc}); 
+ 	});
 
-callback({'response':"Login Sucess",'res':true,'token':id,'grav':grav_url,'email':email});  
+ 
 
 }else{  
 
