@@ -14,16 +14,21 @@
             <div class="col-sm-8">
             
                 <div class="jumbotron">
-                    <h1>Promociones destacadas</h1>
+                    <h2>Promociones destacadas</h2>
 
-					<ul>
+					<span>
 					    <% resultado.docs.forEach(function(doc) { %>
-					        <li>Title - <%= doc.title %>
-					        Header - <%= doc.summary %>
-					        Description - <%= doc.description %>
-					        Url - <%= doc.link %></li>
+                        <ul>
+                            <a href='<%= doc.link %>'>
+    					        <li>
+                                    <h4><b><%= doc.title %></b></h4></br>
+        					        <i><%= doc.summary %></i></br>
+        					        <%= doc.description %>
+    					        </li>
+                           </a>
+                        </ul>
 					    <% }); %>
-					</ul>
+					</span>
                 </div>
                 
             </div>
