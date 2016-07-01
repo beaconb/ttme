@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-sm-8">
+            
+                <div class="jumbotron">
+                    <h2>Perfil usuario</h2>
+                    <form action="http://localhost:2007/user" method="POST">
+                        <div><label>Nombre:</label> <input type="text" id="name" name="name" value="<% if (perfil.doc.name){%><%= perfil.doc.name%><%}%>"></div>
+                        <div><label>Apellidos:</label> <input type="text" id="surename" name="surename" value="<% if (perfil.doc.surename){%><%= perfil.doc.surename%><%}%>"></div>
+        				
+        				<div><label>Facebook:</label> <input type="text" id="facebook" name="facebook" value="<% if (perfil.doc.facebook){%><%= perfil.doc.facebook%><%}%>"></div>
+        				<div><label>Twitter:</label>@<input type="text" id="twitter" name="twitter" value="<% if (perfil.doc.twitter){%><%= perfil.doc.twitter%><%}%>"></div>
+                        <div><label>Google:</label> <input type="text" id="google" name="google" value="<% if (perfil.doc.google){%><%= perfil.doc.google%><%}%>"></div>
+                        <div><button onclick="submit();">Actualizar</button></div>
+                    </form>
+                </div>
+                    
+            </div>
+            <div class="col-sm-4">
+                
+                <% include ../partials/sideBar %>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    
+</body>
+</html>

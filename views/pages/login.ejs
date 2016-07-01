@@ -8,18 +8,15 @@
      <div class="jumbotron" style="padding-bottom:0px;">
         <h2>trastoo.me</h2>
     </div>
-    
         <form action="http://localhost:2007/login" method="POST">
-			Email <input type="text" id="email" name="email"/>
-			Password <input type="password" id="password" name="password"/>
-			<button onclick="submit();">Send</button>
+			Email <input type="text" id="email" name="email" style="margin-left:3%;margin-top:2%;" /></br>
+			Password <input type="password" id="password" name="password" style="margin-left:1%;margin-top:2%;"/></br>
+			<button onclick="submit();">Log In</button>
 		</form>
         <a href="http://localhost:2007/newUser">Sign Up</a>
     </main>
-
     <footer>
         <% include ../partials/footer %>
     </footer>
-    
 </body>
 </html>

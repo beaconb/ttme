@@ -18,6 +18,9 @@ var newuser = new user({
      token: token,   
      active: true,
      email: email,   
+     facebook:'',
+     twitter:'',
+     google:'',
      hashed_password: hashed_password,   
      salt :temp,
      created: new Date() });  

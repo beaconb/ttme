@@ -163,6 +163,25 @@ var sess;
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
           }    
      });
+     //obtiene el detalle de un usuario dado un id     
+     app.post('/user', function(req, res) {
+          sess=req.session; 
+          if (sess.hash){       
+               var name = req.body.name;
+               var surename = req.body.surename;
+               var facebook = req.body.facebook;
+               var twitter = req.body.twitter;
+               var google = req.body.google;
+               
+               user.userUpdate(sess.hash,name,surename,facebook,twitter,google,function(found){
+                    console.log(found);
+                     var perfil = found;
+                    res.render('pages/userUpdate',{perfil:found});
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }    
+     });
 //peticion de cambio de contraseña     
      app.post('/api/chgpass', function(req, res) {       
           var id = req.body.id;                 
@@ -201,6 +220,18 @@ var sess;
      });
      app.get('/newUser', function(req, res) { 
           res.render("pages/newUser");
+     });
+     app.get('/userUpdate', function(req, res) { 
+          sess=req.session; 
+          if (sess.hash){       
+               user.userDetail(sess.hash,function(found){
+                console.log(found);
+                var perfil = found;
+                res.render("pages/userUpdate",{perfil:found});
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }   
      });
      app.get('/home', function(req, res) { 
           sess=req.session; 
