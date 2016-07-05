@@ -8,7 +8,7 @@ exports.listPromos = function(callback){
     } else {throw err;}
 });
 }
-exports.addPromo = function(description,title,summary,publishedDate,fromDate,toDate,link,categoryID,providerID,callback){
+exports.addPromo = function(description,title,summary,publishedDate,fromDate,toDate,link,urlPhoto,urlPhotoMax,categoryID,providerID,callback){
 	var newpromo = new promo({
 	description : description,
 	title : title,
@@ -17,6 +17,8 @@ exports.addPromo = function(description,title,summary,publishedDate,fromDate,toD
 	fromDate : fromDate,
 	toDate : toDate,
 	link : link,
+	urlPhoto : urlPhoto,
+	urlPhotoMax : urlPhotoMax,
 	categoryID : categoryID,
 	providerID : providerID	
 	});
@@ -36,7 +38,7 @@ exports.getPromos = function(ids,callback){
 	});
 }
 exports.getPromo = function(id,callback){
-	promo.findOne({_id:id},function(err,docs){
-		callback({docs});
+	promo.findOne({_id:id},function(err,doc){
+		callback({doc});
 	});
 }

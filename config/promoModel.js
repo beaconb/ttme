@@ -9,6 +9,8 @@ var promoSchema = mongoose.Schema({
     fromDate: Date,
     toDate: Date,
     link: String,
+    urlPhoto: String,
+    urlPhotoMax:String,
     categoryID: Schema.Types.ObjectId,
     providerID: Schema.Types.ObjectId
 });

@@ -31,8 +31,11 @@ module.exports = function(app) {
           sess=req.session; 
           if (sess.hash){
                promo.getPromo(req.params.idPromo,function(found){
-                    console.log(found);
-                    res.json(found);
+                    var contenido = found;
+                    user.userDetail(sess.hash,function(usuario){
+                      var perfil = usuario;
+                      res.render('pages/promo',{contenido:found.doc,perfil:usuario});
+                    });
                });
           }else{
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
@@ -138,14 +141,18 @@ var sess;
      });
 //añade una promocion a las vistas por un usuario     
       app.get('/user/promo/:idpromo',function(req,res){     
+        console.log('entro');  
           sess=req.session; 
           if (sess.hash){    
                var promo = req.params.idpromo;             
-               var user = sess.hash;       
-               user2promo.viewedPromo(promo,user,function (found) {           
-                    console.log(found);             
-                    res.json(found);    
-               }); 
+                
+               user.userDetail(sess.hash,function(usuario){
+                console.log("IdUsuario: "+usuario.doc._id);
+                 user2promo.viewedPromo(promo,usuario.doc._id,function (found) {           
+                      console.log(found);             
+                      res.redirect('/promo/'+promo);    
+                 }); 
+               });
           }else{
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
           }  

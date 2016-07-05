@@ -1,0 +1,288 @@
+body, address{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+.isotope__wrapper {
+  margin: 30px;
+  overflow: hidden; }
+  @media (max-width: 599px) {
+    .isotope__wrapper {
+      margin: 10px 5px 0 5px; } }
+  @media screen and (min-width: 600px) {
+    .isotope__wrapper {
+      margin: 30px 15px 0 15px; } }
+  @media screen and (min-width: 750px) {
+    .isotope__wrapper {
+      margin: 30px 0 0 15px; } }
+  @media screen and (min-width: 1024px) {
+    .isotope__wrapper {
+      margin: 30px 0 0 15px; } }
+
+.isotope {
+  margin: 0 auto;
+  overflow: hidden; }
+
+.wrap {
+  border: 2px solid #130377;
+  max-width: 1800px; }
+  @media (max-width: 767px) {
+    .wrap {
+      margin: 0px;
+      border: 0; } }
+  @media screen and (min-width: 768px) {
+    .wrap {
+      margin: 30px; } }
+  @media screen and (min-width: 810px) {
+    .wrap {
+      margin: 60px; } }
+  @media screen and (min-width: 1200px) {
+    .wrap {
+      margin: 90px; } }
+  @media screen and (min-width: 1980px) {
+    .wrap {
+      margin: 90px auto; } }
+.place {
+  border: 2px solid #130377;
+  margin: 0 0 30px;
+  background: #fff;
+  width: calc(50% - 10px); }
+.place .lead-image {
+    border-bottom: 2px solid #130377;
+    width: 100%; }
+  @media (max-width: 550px) {
+    .place {
+      border-width: 1px; }
+      .place .lead-image {
+        border-width: 1px; } }
+  .place h3, .place p, .place .address, .place .lyft {
+    margin: 0 auto;
+    display: block; }
+  .place h3, .place p {
+    width: calc(100% - 40px); }
+  .place h3 {
+    font-family: "CalibreBlack", Calibri, sans-serif;
+    font-size: 28px;
+    margin-top: 15px;
+    line-height: 28px; }
+  .place .icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-right: 10px;
+    float: left;
+    border: 2px solid #130377;
+    border-radius: 50%; }
+    .place .icon:nth-child(2n) {
+      margin-right: 0; }
+    .place .icon:after {
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .place .icon img {
+      border-radius: 50%;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      -webkit-transition-delay: 0.1s;
+      -moz-transition-delay: 0.1s;
+      transition-delay: 0.1s; }
+    .place .icon:hover {
+      cursor: pointer; }
+  .place a {
+    color: #130377; }
+  .place .address, .place .lyft {
+    font-family: "Apercu Medium", Calibri, sans-serif;
+    font-size: 1em;
+    display: block;
+    position: relative;
+    height: 30px;
+    width: calc(100% - 36px); }
+    .place .address a.apercu, .place .lyft a.apercu {
+      border: none; }
+    .place .address .text-cutoff, .place .lyft .text-cutoff {
+      display: inline-block;
+      height: 27px;
+      overflow: hidden;
+      max-width: calc(100% - 30px);
+      border-bottom: none; }
+    .place .address span, .place .lyft span {
+      display: inline-block;
+      top: 100%;
+      float: left;
+      line-height: 30px; }
+    .place .address img, .place .lyft img {
+      display: inline-block;
+      float: left;
+      margin-right: 5px;
+      width: 20px;
+      height: auto;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+  .place .address {
+    margin-top: 10px; }
+  @media (max-width: 599px) {
+    .place {
+      margin: 0 5px 10px; }
+      .place h3 {
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 18px;
+        margin-bottom: 8px; }
+      .place h3, .place p {
+        width: calc(100% - 20px); }
+      .place p {
+        font-size: 12px; }
+      .place .address, .place .lyft {
+        font-size: 12px;
+        width: calc(100% - 15px);
+        height: 18px;
+        margin-top: 5px; }
+        .place .address span, .place .lyft span {
+          line-height: inherit; }
+        .place .address img, .place .lyft img {
+          width: 14px; }
+        .place .address .text-cutoff, .place .lyft .text-cutoff {
+          height: 20px;
+          overflow: hidden;
+          max-width: calc(100% - 20px);
+          border-width: 1px; }
+      .place .marker-info {
+        display: none; } }
+  @media screen and (min-width: 600px) {
+    .place {
+      margin: 0px 15px 30px;
+      width: calc(50% - 30px); } }
+  @media screen and (min-width: 750px) {
+    .place {
+      margin: 0px 15px 30px;
+      padding: 0;
+      float: left;
+      width: calc(50% - 38px); } }
+  @media screen and (min-width: 1024px) {
+    .place {
+      width: calc(33.3333333% - 35px); } }
+  @media screen and (min-width: 1440px) {
+    .place {
+      width: calc(25% - 35px); } }
+  @media (min-width: 750px) and (max-width: 1023px) {
+    .place:nth-child(2n + 1) {
+      clear: left; } }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    .place:nth-child(3n + 1) {
+      clear: left; } }
+  @media (min-width: 1440px) {
+    .place:nth-child(4n+1) {
+      clear: left; } }
+
+.place-icon {
+  display: inline-block;
+  height: 27px;
+  overflow: hidden; }
+  .place-icon svg {
+    width: 30px;
+    height: auto; }
+
+.marker-info {
+  margin-top: 10px; }
+  .marker-info:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.marker-meta {
+  overflow: hidden;
+  margin: 40px 25px 25px 23px;
+  position: relative;
+  height: 50px; }
+  .marker-meta .marker-type {
+    float: left;
+    width: 110px;
+    margin-bottom: 30px; }
+    .marker-meta .marker-type .marker__image {
+      width: 50px;
+      height: auto; }
+  .marker-meta .explore {
+    float: right;
+    width: 45%;
+    max-width: 100px;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: "Apercu Medium", Calibri, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    @media screen and (min-width: 768px) {
+      .marker-meta .explore {
+        width: 100px; } }
+    .marker-meta .explore a {
+      border: 2px solid #130377;
+      padding: 10px 5px;
+      width: 100%;
+      float: right;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        .marker-meta .explore a {
+          padding: 10px; } }
+      @media screen and (min-width: 1024px) {
+        .marker-meta .explore a {
+          padding: 10px 20px; } }
+  @media (max-width: 599px) {
+    .marker-meta {
+      margin: 20px 10px 10px 10px;
+      height: 30px; }
+      .marker-meta .marker-type {
+        width: 63px; }
+        .marker-meta .marker-type .marker__image {
+          width: 27px;
+          height: 27px;
+          border-width: 1px;
+          margin-right: 2px; }
+          .marker-meta .marker-type .marker__image path, .marker-meta .marker-type .marker__image circle {
+            stroke-width: 1px; }
+      .marker-meta .explore {
+        font-size: 12px; }
+        .marker-meta .explore a {
+          padding: 4px;
+          font-weight: 400;
+          border-width: 1px; } }
+
+.marker__image {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 5px;
+  border: 2px solid #130377;
+  border-radius: 50%; }
+
+.explore:hover {
+  background-color: #82D7C0; }
+
+.apercu {
+  opacity: 0;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  animation: fadein 2s;
+  -webkit-animation-delay: 1s;
+  /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  .apercu a {
+    border-bottom: 2px solid #130377; }
+
+a.apercu {
+  border-bottom: 2px solid #130377; }
+  @media only screen and (max-width: 550px) {
+    a.apercu {
+      border-bottom-width: 1px; } }

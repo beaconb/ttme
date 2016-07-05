@@ -2,7 +2,7 @@
     <div class="container-fluid">
 
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="http://localhost:2007/home">
                 <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
                 EJS Is Fun
             </a>
@@ -12,7 +12,7 @@
             <li><a href="http://localhost:2007/home">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="http://localhost:2007/logout">LogOut</a></li>
+            <li><a href="http://localhost:2007/userUpdate"><% if (perfil.doc.name){%><%=perfil.doc.name%><%} else{%><%=perfil.doc.email%><%}%></a></li>
         </ul>
-      
     </div>
 </nav>
