@@ -70,8 +70,13 @@ exports.userUpdate = function(userID,name,surename,facebook,twitter,google, call
 		console.log("valores usuario: id: "+newuser._id+"- name:"+newuser.name+"- surename: "+newuser.surename+"- facebook: "+newuser.facebook+"- twitter: "
 			+newuser.twitter+"- google: "+newuser.google+"- token: "+newuser.token+"- active: "+newuser.active+"- email: "+newuser.email+"- pwd: "
 			+newuser.hashed_password+"- salt: "+newuser.salt+"- created: "+newuser.created+"- favs: "+newuser.favs+"- last: "+newuser.lastLogin);
-		 newuser.update();
-
+//		 newuser.update();
+		 doc.name = name;
+		 doc.surename = surename;
+		 doc.facebook = facebook;
+		 doc.twitter = twitter;
+		 doc.google = google;
+		 doc.save();
 		callback({doc});
 	});
 };

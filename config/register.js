@@ -21,6 +21,7 @@ var newuser = new user({
      facebook:'',
      twitter:'',
      google:'',
+     name: '',
      hashed_password: hashed_password,   
      salt :temp,
      created: new Date() });  
@@ -36,14 +37,11 @@ if(len == 0){
 
 }); 
 }else{    
-
      callback({'response':"Email already Registered"});  
 }});}else{      
-
      callback({'response':"Password Weak"});  
 
 }}else{    
-
 callback({'response':"Email Not Valid"});  
 } 
 }  
