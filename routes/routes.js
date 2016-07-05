@@ -223,7 +223,16 @@ var sess;
      });     
      });  
      app.get('/about', function(req, res) { 
-          res.render("pages/about");
+      sess=req.session; 
+          if (sess.hash){       
+               user.userDetail(sess.hash,function(found){
+                    console.log(found);
+                     var perfil = found;
+                    res.render('pages/about',{perfil:found});
+               });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }   
      });
      app.get('/newUser', function(req, res) { 
           res.render("pages/newUser");

@@ -4,12 +4,36 @@
 		"selected_items":
 		[
 			[
-				"mongo",
-				"mongodb"
+				"u",
+				"urlPhotoMax"
+			],
+			[
+				"fa",
+				"facebook"
+			],
+			[
+				"t",
+				"twitter"
+			],
+			[
+				"new",
+				"newuser"
+			],
+			[
+				"user",
+				"user2promo"
 			],
 			[
 				"pro",
-				"provincia"
+				"promoID"
+			],
+			[
+				"no",
+				"novaArr"
+			],
+			[
+				"mongo",
+				"mongodb"
 			],
 			[
 				"pr",
@@ -22,10 +46,6 @@
 			[
 				"re",
 				"require"
-			],
-			[
-				"user",
-				"userRouter"
 			],
 			[
 				"get",
@@ -43,15 +63,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 711,
-				"line_ending": "Windows",
-				"name": "package.json"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -85,9 +96,59 @@
 	},
 	"expanded_folders":
 	[
+		"/D/mine/trastoo.me",
+		"/D/mine/trastoo.me/config",
+		"/D/mine/trastoo.me/routes",
+		"/D/mine/trastoo.me/views",
+		"/D/mine/trastoo.me/views/pages",
+		"/D/mine/trastoo.me/views/partials",
+		"/D/mine/trastoo.me/views/styles"
 	],
 	"file_history":
 	[
+		"/D/mine/trastoo.me/views/styles/estilos.ejs",
+		"/D/mine/trastoo.me/views/pages/promo.ejs",
+		"/D/mine/trastoo.me/config/promoModel.js",
+		"/D/mine/trastoo.me/views/pages/home.ejs",
+		"/D/mine/trastoo.me/views/partials/header.ejs",
+		"/D/mine/trastoo.me/views/partials/head.ejs",
+		"/D/mine/trastoo.me/views/partials/sideBar.ejs",
+		"/D/mine/trastoo.me/routes/routes.js",
+		"/D/mine/trastoo.me/config/promo.js",
+		"/D/mine/trastoo.me/config/user.js",
+		"/D/mine/trastoo.me/config/user2promo.js",
+		"/D/mine/trastoo.me/views/styles/trastoo.ejs",
+		"/D/mine/trastoo.me/trastoo.css",
+		"/D/mine/trastoo.me/views/styles/trastoo.css",
+		"/D/mine/trastoo.me/views/pages/trastoo.css",
+		"/D/mine/trastoo.me/views/partials/trastoo.css",
+		"/D/mine/trastoo.me/views/partials/footer.ejs",
+		"/D/mine/trastoo.me/config/register.js",
+		"/D/mine/trastoo.me/views/pages/userUpdate.ejs",
+		"/D/mine/trastoo.me/views/pages/user.ejs",
+		"/D/mine/trastoo.me/config/userModel.js",
+		"/D/mine/trastoo.me/config/login.js",
+		"/D/mine/trastoo.me/views/pages/login.ejs",
+		"/D/mine/trastoo.me/views/pages/loginMensaje.ejs",
+		"/D/mine/trastoo.me/views/pages/newUser.ejs",
+		"/D/mine/trastoo.me/views/pages/about.ejs",
+		"/D/mine/trastoo.me/package.json",
+		"/D/mine/trastoo.me/routes/ejs/list.ejs",
+		"/D/mine/trastoo.me/routes/login.html",
+		"/D/mine/trastoo.me/routes/index.html",
+		"/D/mine/trastoo.me/app.js",
+		"/D/mine/trastoo.me/config/user2promoModel.js",
+		"/D/mine/trastoo.me/ejs/list.ejs",
+		"/D/mine/trastoo.me/angular/login.html",
+		"/D/Users/RLGM001/Desktop/index.html",
+		"/D/mine/trastoo.me/routes/just.css",
+		"/D/mine/trastoo.me/index.html",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/authentication/services.js",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/authentication/controllers.js",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/home/views/home.html",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/home/controllers.js",
+		"/D/Users/RLGM001/Desktop/ttoo/scripts/app.js",
+		"/D/mine/loginExample/views/login.ejs",
 		"/D/mine/trastoo.me/server.js",
 		"/D/mine/trastoome_old/package.json",
 		"/D/mine/trastoome/config/security.js",
@@ -130,7 +191,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -144,6 +205,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"marker-",
+			"address",
+			"%>\"/>",
+			"doc",
+			"/user",
+			"}\n",
+			"just",
 			"});",
 			"userRouter",
 			"id",
@@ -165,39 +233,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 711,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "package.json",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
