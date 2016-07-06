@@ -9,6 +9,7 @@ var session = require('express-session');
 
 module.exports = function(app) {        
      app.use(session({secret: 'ssshhhhh'}));
+     
 //ruta de entrada
      app.get('/', function(req, res) {       
           res.render("pages/login");
