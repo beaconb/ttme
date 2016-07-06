@@ -1,18 +1,44 @@
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-
-        <div class="navbar-header">
-            <a class="navbar-brand" href="http://localhost:2007/home">
-                <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
-                EJS Is Fun
-            </a>
-        </div>
-
-        <ul class="nav navbar-nav">
-            <li><a href="http://localhost:2007/home">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="http://localhost:2007/logout">LogOut</a></li>
-            <li><a href="http://localhost:2007/userUpdate"><% if (perfil.doc.name){%><%=perfil.doc.name%><%} else{%><%=perfil.doc.email%><%}%></a></li>
-        </ul>
+<nav class="header__nav">
+    <a class="header__name" href="http://localhost:2007/home">
+        <div id="grid-logo" class="secondary"></div>
+    </a>
+    <div class="header__share">
+        <a href="/home">
+            <span class="header__links"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 37.655 37.655" enable-background="new 0 0 37.655 37.655" xml:space="preserve">
+                <g>
+                    <circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="18.828" cy="18.827" r="17.828"></circle>
+                    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="10.229" y1="11.879" x2="27.427" y2="11.879"></line>
+                    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="10.229" y1="18.827" x2="27.427" y2="18.827"></line>
+                    <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="10.229" y1="25.776" x2="27.427" y2="25.776"></line>
+                </g>
+            </svg>
+            </span>
+        </a>
+        <a href="/about">
+            <span class="header__links"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 37.895 37.895" enable-background="new 0 0 37.895 37.895" xml:space="preserve">
+                <g>
+                    <circle stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" cx="18.947" cy="18.947" r="18"></circle>
+                    <path class="stroke" fill="none" stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" d="M19.083,23.538c0,0-0.027-1.991,1.746-3.355
+                        l1.146-0.737c1.289-0.937,2.127-2.457,2.127-4.174c0-2.848-2.308-5.156-5.155-5.156s-5.157,2.309-5.157,5.156"></path>
+                    <line fill="none" stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" x1="19.11" y1="25.421" x2="19.11" y2="28.45"></line>
+                </g>
+            </svg>
+            </span>
+        </a>
+       <a href="http://localhost:2007/logout">
+            <span class="header__links"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 37.895 37.895" enable-background="new 0 0 37.895 37.895" xml:space="preserve">
+                <g>
+                    <circle stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" cx="18.947" cy="18.947" r="18"></circle>
+                    <polyline fill="none" stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" points="25.9,18.033 25.9,26.031 
+                    11.9,26.031 11.9,12.031 19.403,12.031   "></polyline>
+                    <polyline fill="none" stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" points="25.066,8.037 28.603,11.573 
+                    25.066,15.109   "></polyline>
+                    <path class="stroke" fill="none" stroke="#FFFFFF" stroke-width="1.8947" stroke-miterlimit="10" d="M18.9,19.906c0-4.763,3.861-8.625,8.625-8.625
+                    "></path>
+                </g>
+            </svg>                    
+            </span>
+       </a>
+        <span class="header__linksN"><a href="http://localhost:2007/userUpdate"><% if (perfil.doc.name){%><%=perfil.doc.name%><%} else{%><%=perfil.doc.email%><%}%></a></span>
     </div>
 </nav>

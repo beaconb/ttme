@@ -3,38 +3,53 @@
 <head>
     <% include ../partials/head %>
 </head>
-<body class="container">
+<body class="nabe-page trastoo">
+    <div class="wrap">
+        <header class="header">
+            <% include ../partials/header %>
+        </header>
+        <div class="header__banner">
+    <h1 class="header__title" data-loc="">Home</h1>
+    <p class="header__author apercu">
+      Curated by <a class="apercu" target="_blank" href="https://www.etsy.com/wholesale" onclick="trackOutboundLink('https://www.etsy.com/wholesale'); ">Etsy Wholesale</a>  
+    </p>
+    <div class="header__tagline apercu"><p>A trip to the Windy City wouldn’t be complete without stopping in and seeing what these amazing independent businesses have to offer. This vibrant retail community dots the Chicago landscape, from the colorful Pilsen neighborhood all the way Uptown. Not only will you find the best independent designers stocked on their shelves, but you’ll definitely encounter many a friendly face along the way.</p>
+</div>
+</div>
+        <input type="hidden" value="#F5F5F1" id="nabe_color">
 
-    <header>
-        <% include ../partials/header %>
-    </header>
+        <nav class="control-views view__select">
+            
+                <div class="view__icon now view__current">
+                    <svg class="circle-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><g fill="none" stroke="#000" stroke-width="1.879" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M17.9 23.2h35.2V54H17.9zM31.7 23.2v30.9M40.2 23.2v30.9M36.3 23.2c-.6-2.4.5-5.2 2.6-6.5.5-.3 1.1-.6 1.7-.7.6-.1 1.2.1 1.7.5s.7 1.1.7 1.8-.3 1.3-.7 1.9c-.8 1.3-2 2.4-3.5 3M32.7 23.2c-1.1-.2-2.2-.7-3.2-1.3s-1.8-1.5-2.1-2.6c-.3-1.1.1-2.4 1-3 .8-.5 1.9-.5 2.7-.1.9.4 1.6 1.1 2.1 1.8 1.1 1.5 1.9 3.3 2.1 5.1" vector-effect="non-scaling-stroke"></path><path d="M32.9 17.6c-.3-1 .1-2.1 1-2.7.9-.6 2.1-.5 2.9.1.8.7 1.1 1.8.7 2.8" vector-effect="non-scaling-stroke"></path></g></svg>
+                </div>
+                <span class="view__text">
+                    <h2>Promociones destacadas</h2>
+                </span>
+            
+        </nav>
 
-    <main>
-        <div class="jumbotron">
-            <h2>Promociones destacadas</h2>
-            <div class="wrap">
-                <div class="isotope__wrapper">
-                    <div class="panel isotope" id="isotope" style="position:relative;height:3520px;">
-            		    <% resultado.docs.forEach(function(doc) { %>
-                        <div class="place parks fitnesshealth " data-color="#f9c700" data-masonry-options="{"gutter": 30 }">
-                            <a href="http://localhost:2007/user/promo/<%= doc._id %>">
-            			        <img class="lead-image imgix" src="<%= doc.urlPhoto %>"/>
-                            </a>
-                            <h3><b><%= doc.title %></b></h3>
-            			    <div class="address"><i><%= doc.summary %></i></div>
-            				<div class="marker-info"><%= doc.description %></div>
-                            <div class="marker-meta">
-                                <div class="explore">
-                                    <a class="apercu" href="http://localhost:2007/user/promo/<%= doc._id %>">Detalle</a>
-                                </div>
+            <div class="isotope__wrapper">
+                <div class="panel isotope" id="isotope" style="position:relative;height:3520px;">
+        		    <% resultado.docs.forEach(function(doc) { %>
+                    <div class="place parks fitnesshealth " data-color="#f9c700" data-masonry-options="{"gutter": 30 }">
+                        <a href="http://localhost:2007/user/promo/<%= doc._id %>">
+        			        <img class="lead-image imgix" src="<%= doc.urlPhoto %>"/>
+                        </a>
+                        <h3><b><%= doc.title %></b></h3>
+        			    <div class="address"><i><%= doc.summary %></i></div>
+        				<div class="marker-info"><%= doc.description %></div>
+                        <div class="marker-meta">
+                            <div class="explore">
+                                <a class="apercu" href="http://localhost:2007/user/promo/<%= doc._id %>">Detalle</a>
                             </div>
                         </div>
-            		    <% }); %>
                     </div>
+        		    <% }); %>
                 </div>
             </div>
-        </div>
-    </main>
+    </div>
+
     <footer>
         <% include ../partials/footer %>
     </footer>
