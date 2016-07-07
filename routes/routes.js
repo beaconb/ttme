@@ -98,12 +98,13 @@ var sess;
 //añade una promocion como favorita para un usuario     
      app.post('/user/favPromo',function(req,res){
           sess=req.session; 
+          console.log('entro a favs');
           if (sess.hash){ 
           	var idPromo = req.body.idPromo;
           	var idUser = sess.hash;
           	user.favPromo(idPromo, idUser, function(found){
           		console.log(found);
-          		res.json(found);
+          	res.redirect('/user/favs');
           	});
           }else{
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
@@ -117,7 +118,7 @@ var sess;
           	var idUser = sess.hash;
           	user.unfavPromo(idPromo, idUser, function(found){
           		console.log(found);
-          		res.json(found);
+          		res.redirect('/user/favs');
           	});
            }else{
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
@@ -130,11 +131,14 @@ var sess;
                var idUser = sess.hash;
                user.listaFavs(idUser,function(found){
                     console.log(found);
-               promo.getPromos(found.arrayFav,function(encuentra){
-                    console.log(encuentra);
-                     res.json(encuentra);
-               });     
-         
+                    promo.getPromos(found.arrayFav,function(encuentra){
+                      var resultado = encuentra;
+                      user.userDetail(sess.hash,function(usuario){
+                      var perfil = usuario;
+                      console.log(encuentra);
+                      res.render("pages/favs",{resultado:encuentra,perfil:usuario});
+                    });    
+                    }); 
                });
           }else{
                res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});

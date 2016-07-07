@@ -18,13 +18,16 @@
                         <div class="sidebar__tags">
  <ul>
    <li class="each__tag">
-    <a href="/guides/chicago#filter=jewelry">
+   <form id="favForm" action="/user/favPromo" method="POST">
+   <input type="hidden" name="idPromo" value="<%= contenido._id%>">
+    <a href="#" onclick="javascript:favForm.submit();">
     <svg class="circle-border" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
         <polyline points="10,27 25,27 25,42 25,12 25,27 40,27" style="fill:none;stroke:#B73C24;stroke-width:3"/>
         </path>
     </svg>
     <span class="tag__text">Hacer Favorita</span>
     </a>
+    </form>
   </li>
   <li class="each__tag">
     <a href="/guides/chicago#filter=livinghomewares">
