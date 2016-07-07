@@ -3,34 +3,52 @@
 <head>
     <% include ../partials/head %>
 </head>
-<body class="container">
-
-    <header>
-        <% include ../partials/header %>
-    </header>
-
-    <main>
-        <div class="row">
-            <div class="col-sm-8">
-            
-                <div class="jumbotron">
-				    <h2><a href="<%= contenido.link%>" target="_blank"><%= contenido.title%></a></h2></br>
-				    <h4><%= contenido.summary%></h4></br>
-				    <%= contenido.description%></br>
+<body class="nabe-page trastoo">
+        <div class="wrap">
+            <header class="header">
+                <% include ../partials/header %>
+            </header>
+            <div class="place__wrap">
+                <div class="place_header">
+                    <div class="place__title"><h1><%= contenido.title%></h1></div>
                 </div>
-                
+                <div class="content">
+                    <aside class="sidebar">
+                        <div class="sidebar__image"><img class="imgix" data-src="urlPhotoMax" src="<%= contenido.urlPhotoMax%>"></div>
+                        <div class="sidebar__tags">
+ <ul>
+   <li class="each__tag">
+    <a href="/guides/chicago#filter=jewelry">
+    <svg class="circle-border" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="10,27 25,27 25,42 25,12 25,27 40,27" style="fill:none;stroke:#B73C24;stroke-width:3"/>
+        </path>
+    </svg>
+    <span class="tag__text">Hacer Favorita</span>
+    </a>
+  </li>
+  <li class="each__tag">
+    <a href="/guides/chicago#filter=livinghomewares">
+    <svg class="circle-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.3 71.3"><g fill="none" stroke="#000" stroke-width="1.879" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M17.9 23.2h35.2V54H17.9zM31.7 23.2v30.9M40.2 23.2v30.9M36.3 23.2c-.6-2.4.5-5.2 2.6-6.5.5-.3 1.1-.6 1.7-.7.6-.1 1.2.1 1.7.5s.7 1.1.7 1.8-.3 1.3-.7 1.9c-.8 1.3-2 2.4-3.5 3M32.7 23.2c-1.1-.2-2.2-.7-3.2-1.3s-1.8-1.5-2.1-2.6c-.3-1.1.1-2.4 1-3 .8-.5 1.9-.5 2.7-.1.9.4 1.6 1.1 2.1 1.8 1.1 1.5 1.9 3.3 2.1 5.1" vector-effect="non-scaling-stroke"></path>
+    </g>
+    </svg>
+    <span class="tag__text">Regalar a un amigo</span>
+    </a>
+   </li>
+ </ul>
+</div>
+                    </aside>
+                    <section class="content__text">
+                        <div class="content__inner apercu">
+                            <p><%= contenido.summary%></p>
+                            <p><%= contenido.description%></p>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="col-sm-4">
-                
-                <% include ../partials/sideBar %>
-
-            </div>
+             <footer>
+                <% include ../partials/footer %>
+            </footer>
         </div>
-    </main>
-
-    <footer>
-        <% include ../partials/footer %>
-    </footer>
-    
-</body>
+    </body>
 </html>
+<!--   <h4><%= contenido.summary%></h4></br> <%= contenido.description%></br> -->
