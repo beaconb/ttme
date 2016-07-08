@@ -6,6 +6,7 @@ var user = require('../config/user');
 var user2promo = require('../config/user2promo');
 var path = require("path");
 var session = require('express-session');
+var mailer = require('../config/nodeMailer');
 
 module.exports = function(app) {        
      app.use(session({secret: 'ssshhhhh'}));
@@ -278,5 +279,37 @@ var sess;
               res.redirect('/');
             }
           });
+     });
+      app.get('/contacto', function(req, res) { 
+        sess=req.session; 
+          if (sess.hash){       
+               user.userDetail(sess.hash,function(found){
+                var perfil = found;
+                res.render("pages/contacto",{perfil:found});
+              });
+          }
+          else {
+             res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }
+     });
+     app.post('/contacto',function(req,res){
+        var email = req.body.email;         
+        var name = req.body.name;       
+        var surename = req.body.surename; 
+        var subject = req.body.subject; 
+        var query = req.body.query; 
+
+       mailer.sendEmail(name, surename, email, subject, query);
+
+        sess=req.session; 
+        if (sess.hash){       
+            user.userDetail(sess.hash,function(found){
+              var perfil = found;
+              res.render("pages/contactoMensaje",{perfil:found});
+            });
+        }
+        else {
+           res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+        }
      });
 };
