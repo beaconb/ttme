@@ -16,51 +16,78 @@
                     <aside class="sidebar">
                         <div class="sidebar__image"><img class="imgix" data-src="urlPhotoMax" src="<%= contenido.urlPhotoMax%>"></div>
                         <div class="sidebar__tags">
- <ul>
-   <li class="each__tag">
-   <form id="favForm" action="/user/favPromo" method="POST">
-   <input type="hidden" name="idPromo" value="<%= contenido._id%>">
-    <a href="#" onclick="javascript:favForm.submit();">
-    <svg class="circle-border" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
-        <polyline points="10,27 25,27 25,42 25,12 25,27 40,27" style="fill:none;stroke:#B73C24;stroke-width:3"/>
-        </path>
-    </svg>
-    <span class="tag__text">Hacer Favorita</span>
-    </a>
-    </form>
-  </li>
-  <li class="each__tag">
-    <a href="/guides/chicago#filter=livinghomewares">
-    <svg class="circle-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.3 71.3"><g fill="none" stroke="#000" stroke-width="1.879" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M17.9 23.2h35.2V54H17.9zM31.7 23.2v30.9M40.2 23.2v30.9M36.3 23.2c-.6-2.4.5-5.2 2.6-6.5.5-.3 1.1-.6 1.7-.7.6-.1 1.2.1 1.7.5s.7 1.1.7 1.8-.3 1.3-.7 1.9c-.8 1.3-2 2.4-3.5 3M32.7 23.2c-1.1-.2-2.2-.7-3.2-1.3s-1.8-1.5-2.1-2.6c-.3-1.1.1-2.4 1-3 .8-.5 1.9-.5 2.7-.1.9.4 1.6 1.1 2.1 1.8 1.1 1.5 1.9 3.3 2.1 5.1" vector-effect="non-scaling-stroke"></path>
-    </g>
-    </svg>
-    <span class="tag__text">Regalar a un amigo</span>
-    </a>
-   </li>
-   <li class="each__tag">
+                             <ul>
+                              <li class="each__tag">
+                               <form id="favForm" action="/user/favPromo" method="POST">
+                               <input type="hidden" name="idPromo" value="<%= contenido._id%>">
+                                <a href="#" onclick="javascript:favForm.submit();">
+                                <svg class="circle-border" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="10,27 25,27 25,42 25,12 25,27 40,27" style="fill:none;stroke:#B73C24;stroke-width:3"/>
+                                    </path>
+                                </svg>
+                                <span class="tag__text">Hacer Favorita</span>
+                                </a>
+                                </form>
+                              </li>
+                              <li class="each__tag">
+                                <a href="/guides/chicago#filter=livinghomewares">
+                                <svg class="circle-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.3 71.3"><g fill="none" stroke="#000" stroke-width="1.879" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M17.9 23.2h35.2V54H17.9zM31.7 23.2v30.9M40.2 23.2v30.9M36.3 23.2c-.6-2.4.5-5.2 2.6-6.5.5-.3 1.1-.6 1.7-.7.6-.1 1.2.1 1.7.5s.7 1.1.7 1.8-.3 1.3-.7 1.9c-.8 1.3-2 2.4-3.5 3M32.7 23.2c-1.1-.2-2.2-.7-3.2-1.3s-1.8-1.5-2.1-2.6c-.3-1.1.1-2.4 1-3 .8-.5 1.9-.5 2.7-.1.9.4 1.6 1.1 2.1 1.8 1.1 1.5 1.9 3.3 2.1 5.1" vector-effect="non-scaling-stroke"></path>
+                                </g>
+                                </svg>
+                                <span class="tag__text">Regalar a un amigo</span>
+                                </a>
+                               </li>
+                               <li class="each__tag">
 
-   <a href="https://twitter.com/onthegridcity" target="_blank">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.778px" height="37.778px" viewBox="0 0 37.778 37.778" enable-background="new 0 0 37.778 37.778" xml:space="preserve">
-<g>
-    
-        <circle fill="none" class="stroke" stroke-width="1.8947" stroke-linejoin="round" stroke-miterlimit="10" cx="18.889" cy="18.89" r="17.942"></circle>
-    <path fill="none" class="stroke" stroke-width="1.8947" stroke-linejoin="round" stroke-miterlimit="10" d="M28.76,12.767
-        c-0.727,0.322-1.507,0.54-2.326,0.638c0.836-0.501,1.479-1.295,1.781-2.24c-0.783,0.464-1.65,0.801-2.572,0.982
-        c-0.738-0.787-1.791-1.278-2.956-1.278c-2.237,0-4.05,1.813-4.05,4.05c0,0.317,0.035,0.626,0.104,0.923
-        c-3.365-0.169-6.35-1.781-8.348-4.231c-0.348,0.598-0.548,1.294-0.548,2.036c0,1.405,0.716,2.645,1.802,3.371
-        c-0.664-0.021-1.288-0.203-1.834-0.507c0,0.017,0,0.034,0,0.051c0,1.963,1.396,3.6,3.248,3.972
-        c-0.34,0.093-0.697,0.142-1.066,0.142c-0.262,0-0.516-0.025-0.763-0.072c0.517,1.608,2.011,2.779,3.783,2.812
-        c-1.386,1.086-3.132,1.733-5.029,1.733c-0.327,0-0.649-0.019-0.966-0.057c1.791,1.149,3.92,1.82,6.207,1.82
-        c7.45,0,11.523-6.172,11.523-11.523c0-0.176-0.004-0.351-0.012-0.524C27.53,14.293,28.217,13.579,28.76,12.767z"></path>
-</g>
-</svg>
+                               <a href="#" onclick="shareTwitter('http://trastoo.me/promo/<%= contenido._id%>','<%= contenido.summary%>');" target="_blank">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.778px" height="37.778px" viewBox="0 0 37.778 37.778" enable-background="new 0 0 37.778 37.778" xml:space="preserve">
+                            <g>
+                                
+                                    <circle fill="none" class="stroke" stroke-width="1.8947" stroke-linejoin="round" stroke-miterlimit="10" cx="18.889" cy="18.89" r="17.942"></circle>
+                                <path fill="none" class="stroke" stroke-width="1.8947" stroke-linejoin="round" stroke-miterlimit="10" d="M28.76,12.767
+                                    c-0.727,0.322-1.507,0.54-2.326,0.638c0.836-0.501,1.479-1.295,1.781-2.24c-0.783,0.464-1.65,0.801-2.572,0.982
+                                    c-0.738-0.787-1.791-1.278-2.956-1.278c-2.237,0-4.05,1.813-4.05,4.05c0,0.317,0.035,0.626,0.104,0.923
+                                    c-3.365-0.169-6.35-1.781-8.348-4.231c-0.348,0.598-0.548,1.294-0.548,2.036c0,1.405,0.716,2.645,1.802,3.371
+                                    c-0.664-0.021-1.288-0.203-1.834-0.507c0,0.017,0,0.034,0,0.051c0,1.963,1.396,3.6,3.248,3.972
+                                    c-0.34,0.093-0.697,0.142-1.066,0.142c-0.262,0-0.516-0.025-0.763-0.072c0.517,1.608,2.011,2.779,3.783,2.812
+                                    c-1.386,1.086-3.132,1.733-5.029,1.733c-0.327,0-0.649-0.019-0.966-0.057c1.791,1.149,3.92,1.82,6.207,1.82
+                                    c7.45,0,11.523-6.172,11.523-11.523c0-0.176-0.004-0.351-0.012-0.524C27.53,14.293,28.217,13.579,28.76,12.767z"></path>
+                            </g>
+                            </svg>
 
-       <span class="tag__text">Twittealo</span> 
-        
-    </a>
-    </li>
- </ul>
-</div>
+                                   <span class="tag__text">Twittealo</span> 
+                                    
+                                </a>
+                                </li>
+
+                                <li class="each__tag">
+                                    <a href="#" onclick="shareFacebook('http://trastoo.me/promo/<%= contenido._id%>','<%= contenido.summary%>', '<%= contenido.urlPhoto%>');" target="_blank">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.778px" height="37.778px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                            <g>
+                                
+                                    <circle fill="none" class="stroke" stroke-width="22.8947" stroke-linejoin="round" stroke-miterlimit="39" cx="255.889" cy="256.89" r="246.942"></circle>
+                                    <path fill="none" class="stroke" stroke-width="22.8947" stroke-linejoin="round" stroke-miterlimit="10" d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
+                                    </g>
+                            </svg>
+
+                                   <span class="tag__text">Díselo a Facebook</span> 
+                                    </a>
+                                </li>
+                                <li class="each__tag">
+                                    <a href="#" onclick="shareGooglePlus('http://trastoo.me/promo/<%= contenido._id%>');" target="_blank">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.778px" height="37.778px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                            <g>
+                                
+                                    <circle fill="none" class="stroke" stroke-width="22.8947" stroke-linejoin="round" stroke-miterlimit="39" cx="255.889" cy="256.89" r="246.942"></circle>
+                                    <path fill="none" class="stroke" stroke-width="22.8947" stroke-linejoin="round" stroke-miterlimit="10" d="M416.6 179.9h-41.5v41.5h-20.8v-41.5h-41.5v-20.8h41.5v-41.5h20.8v41.5h41.5V179.9zM299.2 351.6c0 31.1-28.4 69-99.9 69 -52.3 0-95.9-22.5-95.9-60.5 0-29.3 18.5-67.3 105.1-67.3 -12.9-10.5-16-25.1-8.2-41 -50.7 0-76.7-29.8-76.7-67.7 0-37 27.5-70.7 83.7-70.7 14.2 0 90 0 90 0l-20.1 21.1h-23.6c16.7 9.5 25.5 29.2 25.5 50.9 0 19.9-11 36-26.6 48.1 -27.7 21.4-20.6 33.4 8.4 54.6C289.7 309.6 299.2 326.2 299.2 351.6zM243.1 186.8c-4.2-31.8-24.9-58-49.2-58.7 -24.3-0.7-40.5 23.7-36.3 55.5 4.2 31.8 27.2 54.1 51.5 54.8C233.3 239.1 247.3 218.6 243.1 186.8zM268.1 354.8c0-26.2-23.9-51.2-64-51.2 -36.1-0.4-66.8 22.8-66.8 49.8 0 27.5 26.1 50.4 62.2 50.4C245.8 403.7 268.1 382.2 268.1 354.8z"></path>
+                                    </g>
+                            </svg>
+
+                                   <span class="tag__text">Googléalo</span> 
+                                    </a>
+                                </li>
+                             </ul>
+                        </div>
                     </aside>
                     <section class="content__text">
                         <div class="content__inner apercu">
