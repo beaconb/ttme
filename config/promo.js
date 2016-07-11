@@ -42,3 +42,9 @@ exports.getPromo = function(id,callback){
 		callback({doc});
 	});
 }
+exports.getPromosByCategory = function(idCat,callback){
+	promo.find({"categories":{$in:idCat}},function(err,docs){
+		callback({docs});
+	});
+
+}

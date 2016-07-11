@@ -11,7 +11,7 @@ var promoSchema = mongoose.Schema({
     link: String,
     urlPhoto: String,
     urlPhotoMax:String,
-    categoryID: Schema.Types.ObjectId,
+    categories: Array,
     providerID: Schema.Types.ObjectId
 });
 

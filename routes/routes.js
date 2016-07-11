@@ -1,7 +1,8 @@
 var chgpass = require('../config/chgpass'); 
 var register = require('../config/register'); 
 var login = require('../config/login');   
-var promo = require('../config/promo');  
+var promo = require('../config/promo');
+var category = require('../config/category');
 var user = require('../config/user');
 var user2promo = require('../config/user2promo');
 var path = require("path");
@@ -82,7 +83,11 @@ var sess;
           promo.listPromos(function(encontrado){
           var resultado = encontrado;
           var perfil = found;
-          res.render("pages/home",{resultado:encontrado,perfil:found});
+          category.listCategories(function(listado){
+                  console.log(listado);
+                var categs = listado;
+                  res.render("pages/home",{resultado:encontrado,perfil:found,categs:listado});
+                });
           });
      });    
      });     
@@ -263,7 +268,11 @@ var sess;
                 promo.listPromos(function(encontrado){
                 var resultado = encontrado;
                 var perfil = found;
-                res.render("pages/home",{resultado:encontrado,perfil:found});
+                category.listCategories(function(listado){
+                  console.log(listado);
+                var categs = listado;
+                  res.render("pages/home",{resultado:encontrado,perfil:found,categs:listado});
+                });
           });
                });
           }else{
@@ -311,5 +320,34 @@ var sess;
         else {
            res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
         }
+     });
+
+     app.get('/categories', function(req, res) {    
+      sess=req.session; 
+          if (sess.hash){   
+      promo.listPromos(function(found){
+        console.log(found);
+        res.json(found);
+      });
+          }else{
+               res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+          }
+     });
+     //lista todas las promos de una categoria concreta
+     app.get('/categories/:idCat',function(req, res){
+      sess=req.session; 
+      if (sess.hash){    
+        var categoryId = req.params.idCat;
+        category.categoryDetail(categoryId,function(nombCat){
+            var category = nombCat;
+          promo.getPromosByCategory(categoryId,function(listado){
+             console.log(listado);   
+             var listado = listado;          
+             res.render('pages/categories/',{listado:listado,category:nombCat});    
+          });
+        });
+      }else{
+        res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
+      }  
      });
 };
