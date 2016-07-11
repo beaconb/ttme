@@ -342,8 +342,12 @@ var sess;
             var category = nombCat;
           promo.getPromosByCategory(categoryId,function(listado){
              console.log(listado);   
-             var listado = listado;          
-             res.render('pages/categories/',{listado:listado,category:nombCat});    
+             var listado = listado;        
+              user.userDetail(sess.hash,function(found){
+              var perfil = found;
+              res.render('pages/categories',{listado:listado,category:nombCat,perfil:found}); 
+            });  
+               
           });
         });
       }else{
