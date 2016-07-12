@@ -334,22 +334,28 @@ var sess;
           }
      });
      //lista todas las promos de una categoria concreta
-     app.get('/categories/:idCat',function(req, res){
+     app.get('/categories/:idCategory',function(req, res){
       sess=req.session; 
+      
       if (sess.hash){    
-        var categoryId = req.params.idCat;
-        category.categoryDetail(categoryId,function(nombCat){
-            var category = nombCat;
-          promo.getPromosByCategory(categoryId,function(listado){
-             console.log(listado);   
-             var resultado = listado;        
+        var categoryId = req.params.idCategory;
+        category.categoryDetail(categoryId,function(claseDB){
+            var clase = claseDB;
+            console.log("Categoria que me esta llegando: "+clase.name);
+          });
+
+            promo.getPromosByCategory(categoryId,function(listado){
+             console.log("resultado de promos by cat: "+listado);   
+                 
               user.userDetail(sess.hash,function(found){
+              var resultado = listado;   
               var perfil = found;
-              res.render('pages/categories',{resultado:listado,category:nombCat,perfil:found}); 
+              
+              res.render('pages/categories',{resultado:listado,clase:claseDB,perfil:found}); 
             });  
                
           });
-        });
+
       }else{
         res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
       }  

@@ -11,6 +11,7 @@ exports.listCategories = function(callback){
 });
 }
 exports.categoryDetail = function(idCat,callback){
+	console.log("idCategoria que me llega: "+idCat);
 	categor.find({_id: idCat}, function(err, doc) {
     if (!err){ 
     	console.log("resultado categorias: "+doc);
