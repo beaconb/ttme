@@ -11,7 +11,7 @@
     "urlPhoto" : "http://g01.a.alicdn.com/kf/HTB1MqYDJVXXXXbLXXXXq6xXFXXXU/New-Arrival-Personalized-Usa-Musical-Flag-Throw-Pillowcases-16x16-18x18-font-b-20x20-b-font-24x24.jpg",
     "urlPhotoMax" : "http://g01.a.alicdn.com/kf/HTB1MqYDJVXXXXbLXXXXq6xXFXXXU/New-Arrival-Personalized-Usa-Musical-Flag-Throw-Pillowcases-16x16-18x18-font-b-20x20-b-font-24x24.jpg",
     "categories" : [ 
-        ObjectId("577e9c296f18f438c8aedd62")
+        "577e9c296f18f438c8aedd62"
     ],
     "providerID" : ObjectId("575ea27df4de338c2486a3d2"),
     "__v" : 0
@@ -30,7 +30,7 @@
     "urlPhoto" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "urlPhotoMax" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "categories" : [ 
-        ObjectId("577e90586f18f438c8aedd58")
+        "577e90586f18f438c8aedd58"
     ],
     "providerID" : ObjectId("575ea27df4de338c2486a3d2"),
     "__v" : 0
@@ -49,8 +49,8 @@
     "urlPhoto" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "urlPhotoMax" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "categories" : [ 
-        ObjectId("577e9c296f18f438c8aedd62"), 
-        ObjectId("577e9b146f18f438c8aedd5d")
+        "577e9c296f18f438c8aedd62", 
+        "577e9b146f18f438c8aedd5d"
     ],
     "providerID" : ObjectId("575ea27df4de338c2486a3d2"),
     "__v" : 0
@@ -69,8 +69,8 @@
     "urlPhoto" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "urlPhotoMax" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "categories" : [ 
-        ObjectId("577e90586f18f438c8aedd58"), 
-        ObjectId("577e9b146f18f438c8aedd5d")
+        "577e90586f18f438c8aedd58", 
+        "577e9b146f18f438c8aedd5d"
     ],
     "providerID" : ObjectId("575ea27df4de338c2486a3d2"),
     "__v" : 0
@@ -89,8 +89,8 @@
     "urlPhoto" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "urlPhotoMax" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCcrClRrqrxAKtfCe4U-sW_6MKuUL7AVnPjwWK0dejNkba6fg9",
     "categories" : [ 
-        ObjectId("577e9c296f18f438c8aedd62"), 
-        ObjectId("577e90966f18f438c8aedd59")
+        "577e9c296f18f438c8aedd62", 
+        "577e90966f18f438c8aedd59"
     ],
     "providerID" : ObjectId("575ea27df4de338c2486a3d2"),
     "__v" : 0

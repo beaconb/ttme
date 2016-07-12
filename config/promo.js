@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'); 
 var promo = require('../config/promoModel');   
-
+mongoose.set('debug', true);
 exports.listPromos = function(callback){
 	promo.find({}, function(err, docs) {
     if (!err){ 
@@ -43,8 +43,8 @@ exports.getPromo = function(id,callback){
 	});
 }
 exports.getPromosByCategory = function(idCat,callback){
-	console.log("REspuestas de promos por categorias");
-	promo.find({"categories":{$in:[idCat]}},function(err,docs){
+	console.log("REspuestas de promos por categorias: "+idCat);
+	promo.find({categories:idCat},function(err,docs){
 		callback({docs});
 	});
 
