@@ -8,7 +8,7 @@ exports.listPromos = function(callback){
     } else {throw err;}
 });
 }
-exports.addPromo = function(description,title,summary,publishedDate,fromDate,toDate,link,urlPhoto,urlPhotoMax,categoryID,providerID,callback){
+exports.addPromo = function(description,title,summary,publishedDate,fromDate,toDate,link,urlPhoto,urlPhotoMax,categories,providerID,callback){
 	var newpromo = new promo({
 	description : description,
 	title : title,
@@ -19,7 +19,7 @@ exports.addPromo = function(description,title,summary,publishedDate,fromDate,toD
 	link : link,
 	urlPhoto : urlPhoto,
 	urlPhotoMax : urlPhotoMax,
-	categoryID : categoryID,
+	categoryID : categories,
 	providerID : providerID	
 	});
 	newpromo.save(function (err) {  
@@ -43,7 +43,8 @@ exports.getPromo = function(id,callback){
 	});
 }
 exports.getPromosByCategory = function(idCat,callback){
-	promo.find({"categories":{$in:idCat}},function(err,docs){
+	console.log("REspuestas de promos por categorias");
+	promo.find({"categories":{$in:[idCat]}},function(err,docs){
 		callback({docs});
 	});
 

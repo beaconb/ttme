@@ -55,10 +55,10 @@ module.exports = function(app) {
 		var fromDate = req.body.fromDate;
 		var toDate = req.body.toDate;
 		var link = req.body.link;
-		var categoryID = req.body.categoryID;
+		var categories = req.body.categories;
 		var providerID = req.body.providerID;	
 
-        promo.addPromo(description,title,summary,publishedDate,fromDate,toDate,link,categoryID,providerID, function (found) {             
+        promo.addPromo(description,title,summary,publishedDate,fromDate,toDate,link,categories,providerID, function (found) {             
              console.log(found);             
              res.json(found);    
      	});
@@ -342,10 +342,10 @@ var sess;
             var category = nombCat;
           promo.getPromosByCategory(categoryId,function(listado){
              console.log(listado);   
-             var listado = listado;        
+             var resultado = listado;        
               user.userDetail(sess.hash,function(found){
               var perfil = found;
-              res.render('pages/categories',{listado:listado,category:nombCat,perfil:found}); 
+              res.render('pages/categories',{resultado:listado,category:nombCat,perfil:found}); 
             });  
                
           });
