@@ -341,9 +341,6 @@ var sess;
         var categoryId = req.params.idCategory;
         category.categoryDetail(categoryId,function(claseDB){
             var clase = claseDB;
-            console.log("Categoria que me esta llegando: "+clase.name);
-          });
-
             promo.getPromosByCategory(categoryId,function(listado){
              console.log("resultado de promos by cat: "+listado);   
                  
@@ -355,7 +352,7 @@ var sess;
             });  
                
           });
-
+      });
       }else{
         res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
       }  

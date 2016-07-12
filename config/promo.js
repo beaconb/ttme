@@ -43,8 +43,8 @@ exports.getPromo = function(id,callback){
 	});
 }
 exports.getPromosByCategory = function(idCat,callback){
-	console.log("REspuestas de promos por categorias: "+idCat);
 	promo.find({categories:idCat},function(err,docs){
+		console.log("REspuestas de promos por categorias: "+docs);
 		callback({docs});
 	});
 
