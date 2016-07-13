@@ -308,8 +308,9 @@ var sess;
         var subject = req.body.subject; 
         var query = req.body.query; 
 
+    if( /(.+)@(.+){2,}\.(.+){2,}/.test(email) ){
+      console.log("mail valido");
        mailer.sendEmail(name, surename, email, subject, query);
-
         sess=req.session; 
         if (sess.hash){       
             user.userDetail(sess.hash,function(found){
@@ -320,7 +321,10 @@ var sess;
         else {
            res.render('pages/loginMensaje',{mensaje:"Usuario no logado"});
         }
-     });
+    } else {
+      res.send("El email no se valido Volver")  
+    }
+});
 
      app.get('/categories', function(req, res) {    
       sess=req.session; 
@@ -341,14 +345,18 @@ var sess;
         var categoryId = req.params.idCategory;
         category.categoryDetail(categoryId,function(claseDB){
             var clase = claseDB;
-            promo.getPromosByCategory(categoryId,function(listado){
-             console.log("resultado de promos by cat: "+listado);   
+            promo.getPromosByCategory(categoryId,function(listPromos){
+             console.log("resultado de promos by cat: "+listPromos);   
                  
               user.userDetail(sess.hash,function(found){
-              var resultado = listado;   
+              var resultado = listPromos;   
               var perfil = found;
-              
-              res.render('pages/categories',{resultado:listado,clase:claseDB,perfil:found}); 
+              category.listCategories(function(listado){
+                  console.log(listado);
+                var categs = listado;
+                   res.render('pages/categories',{resultado:listPromos,clase:claseDB,perfil:found,categs:listado}); 
+                });
+             
             });  
                
           });

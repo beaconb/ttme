@@ -8,6 +8,39 @@
             <header class="header">
                 <% include ../partials/header %>
             </header>
+            <nav id="location">
+                <div class="location__wrap">
+                <div class="city">
+                    <span class="curr">
+                        <a href="/">
+                            <span>Categorías</span>
+                            
+                        </a>
+                    </span>
+                </div>
+                <ul id="nav-cities"></ul>
+                <div class="hood">
+            <span class="curr"><a href="javascript:void(0)">
+                <span class="name">Selecciona una categoría</span>
+                
+                <span>
+                    <svg class="arrow view__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 15" enable-background="new 0 0 25 15"><path class="stroke" vector-effect="non-scaling-stroke" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M23.9 1.6L12.5 13.1 1.1 1.6"></path></svg>
+                </span>
+                </a>
+            </span>         
+            <ul>
+                <% categs.docs.forEach(function(cat) { %>
+                <li class="cityguides-boston">
+                    <a href="/categories/<%= cat._id %>">
+                        <%= cat.name %>
+                    </a>
+                </li>
+                <% }); %>
+            </ul>
+            </div>
+                </div>
+            </nav>
+
             <div class="header__banner">
         <h1 class="header__title" data-loc=""><%= clase.doc.name %></h1>
         <p class="header__tagline apercu">
