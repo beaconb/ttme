@@ -4,48 +4,60 @@
 		"selected_items":
 		[
 			[
-				"us",
-				"userID"
+				"list",
+				"listPromos"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"cat",
+				"categoryId"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"u",
+				"user_id"
 			],
 			[
 				"promo",
 				"promoID"
 			],
 			[
-				"pr",
-				"providerID"
+				"user",
+				"userID"
 			],
 			[
-				"ti",
-				"title"
+				"fa",
+				"facebook"
+			],
+			[
+				"t",
+				"twitter"
 			],
 			[
 				"new",
-				"newpromo"
-			],
-			[
-				"p",
-				"providerID"
-			],
-			[
-				"ca",
-				"categoryID"
-			],
-			[
-				"S",
-				"Schema"
-			],
-			[
-				"mongo",
-				"mongoose"
-			],
-			[
-				"lis",
-				"listen"
+				"newuser"
 			],
 			[
 				"pro",
-				"provincia"
+				"promoID"
+			],
+			[
+				"no",
+				"novaArr"
+			],
+			[
+				"mongo",
+				"mongodb"
+			],
+			[
+				"pr",
+				"proveedor"
 			],
 			[
 				"prom",
@@ -54,10 +66,6 @@
 			[
 				"re",
 				"require"
-			],
-			[
-				"user",
-				"userRouter"
 			],
 			[
 				"get",
@@ -75,30 +83,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "config/promoModel.js",
-			"settings":
-			{
-				"buffer_size": 433,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/pages/contacto.ejs",
-			"settings":
-			{
-				"buffer_size": 4152,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config/categoryModel.js",
-			"settings":
-			{
-				"buffer_size": 234,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -132,30 +116,73 @@
 	},
 	"expanded_folders":
 	[
-		"/C/mine/trastoo.me/resources",
-		"/C/mine/trastoo.me",
-		"/C/mine/trastoo.me/config",
-		"/C/mine/trastoo.me/docs",
-		"/C/mine/trastoo.me/img",
-		"/C/mine/trastoo.me/routes",
-		"/C/mine/trastoo.me/views",
-		"/C/mine/trastoo.me/views/pages"
+		"/D/mine/trastoo.me",
+		"/D/mine/trastoo.me/config",
+		"/D/mine/trastoo.me/docs",
+		"/D/mine/trastoo.me/public",
+		"/D/mine/trastoo.me/public/images",
+		"/D/mine/trastoo.me/views",
+		"/D/mine/trastoo.me/views/partials"
 	],
 	"file_history":
 	[
-		"/C/mine/trastoo.me/docs/categorias.txt",
-		"/C/mine/trastoo.me/docs/categories.js",
-		"/C/mine/trastoo.me/docs/tablas.js",
-		"/C/mine/trastoo.me/package.json",
-		"/C/mine/trastoo.me/routes/routes.js",
-		"/C/mine/trastoo.me/config/promo.js",
-		"/C/mine/trastoo.me/config/user.js",
-		"/C/mine/trastoo.me/config/userModel.js",
-		"/C/mine/trastoo.me/config/promoModel.js",
-		"/C/mine/trastoo.me/app.js",
-		"/C/mine/trastoo.me/config/register.js",
-		"/C/mine/trastoo.me/config/login.js",
-		"/C/mine/trastoo.me/config/chgpass.js",
+		"/D/mine/trastoo.me/app.js",
+		"/D/mine/trastoo.me/views/partials/header.ejs",
+		"/D/mine/trastoo.me/views/pages/contacto.ejs",
+		"/D/mine/trastoo.me/routes/routes.js",
+		"/D/mine/trastoo.me/config/login.js",
+		"/D/mine/trastoo.me/config/nodeMailer.js",
+		"/D/mine/trastoo.me/views/pages/home.ejs",
+		"/D/mine/trastoo.me/views/pages/categories.ejs",
+		"/D/mine/trastoo.me/docs/promos.sql",
+		"/D/mine/trastoo.me/config/category.js",
+		"/D/mine/trastoo.me/config/promo.js",
+		"/D/mine/trastoo.me/docs/users.sql",
+		"/D/mine/trastoo.me/views/pages/login.ejs",
+		"/D/mine/trastoo.me/config/promoModel.js",
+		"/D/mine/trastoo.me/config/categoryModel.js",
+		"/D/mine/trastoo.me/views/pages/contactoMensaje.ejs",
+		"/D/mine/trastoo.me/package.json",
+		"/D/mine/trastoo.me/views/pages/userUpdate.ejs",
+		"/D/mine/trastoo.me/views/pages/newUser.ejs",
+		"/D/mine/trastoo.me/views/pages/loginMensaje.ejs",
+		"/D/mine/trastoo.me/docs/icons.html",
+		"/D/mine/trastoo.me/views/pages/promo.ejs",
+		"/D/mine/trastoo.me/docs/icons.css",
+		"/D/mine/trastoo.me/views/partials/head.ejs",
+		"/D/mine/trastoo.me/views/pages/favs.ejs",
+		"/D/mine/trastoo.me/views/styles/colors.ejs",
+		"/D/mine/trastoo.me/config/user2promoModel.js",
+		"/D/mine/trastoo.me/config/user2promo.js",
+		"/D/mine/trastoo.me/views/styles/estilos.ejs",
+		"/D/mine/trastoo.me/views/styles/trastoo.ejs",
+		"/D/mine/trastoo.me/views/styles/fonts.ejs",
+		"/D/mine/trastoo.me/views/partials/footer.ejs",
+		"/D/mine/trastoo.me/views/partials/sideBar.ejs",
+		"/D/mine/trastoo.me/config/user.js",
+		"/D/mine/trastoo.me/trastoo.css",
+		"/D/mine/trastoo.me/views/styles/trastoo.css",
+		"/D/mine/trastoo.me/views/pages/trastoo.css",
+		"/D/mine/trastoo.me/views/partials/trastoo.css",
+		"/D/mine/trastoo.me/config/register.js",
+		"/D/mine/trastoo.me/views/pages/user.ejs",
+		"/D/mine/trastoo.me/config/userModel.js",
+		"/D/mine/trastoo.me/views/pages/about.ejs",
+		"/D/mine/trastoo.me/routes/ejs/list.ejs",
+		"/D/mine/trastoo.me/routes/login.html",
+		"/D/mine/trastoo.me/routes/index.html",
+		"/D/mine/trastoo.me/ejs/list.ejs",
+		"/D/mine/trastoo.me/angular/login.html",
+		"/D/Users/RLGM001/Desktop/index.html",
+		"/D/mine/trastoo.me/routes/just.css",
+		"/D/mine/trastoo.me/index.html",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/authentication/services.js",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/authentication/controllers.js",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/home/views/home.html",
+		"/D/Users/RLGM001/Desktop/ttoo/modules/home/controllers.js",
+		"/D/Users/RLGM001/Desktop/ttoo/scripts/app.js",
+		"/D/mine/loginExample/views/login.ejs",
+		"/D/mine/trastoo.me/server.js",
 		"/D/mine/trastoome_old/package.json",
 		"/D/mine/trastoome/config/security.js",
 		"/D/mine/trastoome/test/config/test-config.js",
@@ -197,7 +224,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -211,6 +238,41 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"name",
+			"pages/categories",
+			"_id",
+			"userDetail",
+			"perfil",
+			"contenido.title",
+			"f76400",
+			"circle-border",
+			"height",
+			"sidebar-t",
+			"circle-bo",
+			"marker-info",
+			".wrap",
+			"header__title",
+			"place__header",
+			".panel",
+			".a",
+			"grid-logo",
+			"#130377",
+			".wrap",
+			"wrap",
+			"body",
+			"glasgow-glasgow",
+			"nabe-page",
+			".wrap",
+			"wrap",
+			"wrsa",
+			"wrs",
+			"marker-",
+			"address",
+			"%>\"/>",
+			"doc",
+			"/user",
+			"}\n",
+			"just",
 			"});",
 			"userRouter",
 			"id",
@@ -222,6 +284,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"#B73C24",
+			"trastoo"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -232,99 +296,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "config/promoModel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 433,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								295,
-								295
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "views/pages/contacto.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4152,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3755,
-								3755
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 517.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/categoryModel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 234,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -367,7 +340,7 @@
 	"project": "trastoo.me.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
