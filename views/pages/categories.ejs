@@ -73,12 +73,6 @@
                                 <div class="explore">
                                     <a class="apercu" href="http://localhost:2007/user/promo/<%= doc._id %>">Detalle</a>
                                 </div>
-                                <div class="explore">
-                                	<form id="unfavForm" action="/user/unfavPromo" method="POST">
-   										<input type="hidden" name="idPromo" value="<%= doc._id%>">
-                                    	<a class="apercu" href="#" onclick="javascript:desfav();">Quitar</a>
-                                    </form>
-                                </div>
                             </div>
                         </div>
             		    <% }); %>

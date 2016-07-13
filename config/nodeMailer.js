@@ -2,16 +2,16 @@ var nodemailer = require('nodemailer'); // email sender function
 exports.sendEmail = function(name, surename, email, subject, query, callback){
 	console.log('VOy a enviar el correo');
     var transporter = nodemailer.createTransport("SMTP",{
-      host: 'smtp.gmail.com',
+      host: 'smtp.trastoo.me',
       port: 465,
-      secure: true,
+      secureConnection: true,
       auth: {
-           user: 'beaconb.mail@gmail.com',
+           user: 'info@trastoo.me',
            pass: 'Raul#G0mez'
        }
 	});
 	var mailOptions = {
-       from: 'trastoo.me',
+       from: 'info@trastoo.me',
        to: email,
        subject: subject,
        text: query
