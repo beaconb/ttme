@@ -66,7 +66,7 @@
                     <% resultado.ItemArray.Item.forEach(function(doc) { %>
                         <div class="place parks fitnesshealth " data-color="#f9c700" data-masonry-options="{"gutter": 30 }">
                             <a href="http://localhost:2007/user/promo/<%= doc._id %>">
-                                <img class="lead-image imgix" src="<%= doc.urlPhoto %>"/>
+                                <img class="lead-image imgix" style="width:80px;height:80px;" src="<%= doc.GalleryURL %>"/>
                             </a>
                             <h3><b><%= doc.ConvertedCurrentPrice.Value %> <%= doc.ConvertedCurrentPrice.CurrencyID %></b></h3>
                             
