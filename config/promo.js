@@ -14,12 +14,14 @@ return http.get({
     }, function(response) {
         // Continuously update stream with data
         var body = '';
+        var salida = '';
         response.on('data', function(d) {
             body += d;
         });
         response.on('end', function() {
-	        console.log("ConsoleLog: "+body);
-		   	callback({body});
+        	salida = body;
+	        console.log("ConsoleLog: "+salida);
+		   	callback({"salida":salida});
         });
     });
 }

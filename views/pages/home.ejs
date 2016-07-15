@@ -58,25 +58,27 @@
                     <span class="view__text">
                         <h2>Promociones destacadas</h2>
                     </span>
+
             </nav>
 
                 <div class="isotope__wrapper">
                     <div class="panel isotope" id="isotope" style="position:relative;">
-            		    <% resultado.ItemArray.Item.forEach(function(doc) { %>
+                    <% resultado.ItemArray.Item.forEach(function(doc) { %>
                         <div class="place parks fitnesshealth " data-color="#f9c700" data-masonry-options="{"gutter": 30 }">
                             <a href="http://localhost:2007/user/promo/<%= doc._id %>">
-            			        <img class="lead-image imgix" src="<%= doc.urlPhoto %>"/>
+                                <img class="lead-image imgix" src="<%= doc.urlPhoto %>"/>
                             </a>
-                            <h3><b><%= doc.title %></b></h3>
-            			    <div class="address"><i><%= doc.summary %></i></div>
-            				<div class="marker-info"><%= doc.description %></div>
+                            <h3><b><%= doc.ConvertedCurrentPrice.Value %> <%= doc.ConvertedCurrentPrice.CurrencyID %></b></h3>
+                            
                             <div class="marker-meta">
                                 <div class="explore">
-                                    <a class="apercu" href="http://localhost:2007/user/promo/<%= doc._id %>">Detalle</a>
+                                    <a class="apercu" href="http://localhost:2007/user/promo/">Detalle</a>
                                 </div>
                             </div>
                         </div>
-            		    <% }); %>
+                        <% }); %>
+                    
+
                     </div>
                 </div>
             <footer>

@@ -80,15 +80,15 @@ var sess;
           //email comes from HTML page.
           sess.hash=found.token;
           promo.listPromos(function(encontrado){
-          var resultado = encontrado;
-          console.log("EBAY Result: "+encontrado);
+          var resultado = JSON.parse(encontrado.salida);
+          console.log("EBAY Result: "+resultado.Ack);
           var perfil = found;
           category.listCategories(function(listado){
                 var categs = listado;
-                  res.render("pages/home",{resultado:encontrado,perfil:found,categs:listado});
+                  res.render("pages/home",{resultado:resultado,perfil:found,categs:listado});
                 });
           });
-     });    
+      });    
      });     
 //registro de un nuevo usuario en la plataforma
      app.post('/register',function(req,res){         
