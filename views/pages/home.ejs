@@ -62,7 +62,7 @@
 
                 <div class="isotope__wrapper">
                     <div class="panel isotope" id="isotope" style="position:relative;">
-            		    <% resultado.docs.forEach(function(doc) { %>
+            		    <% resultado.ItemArray.Item.forEach(function(doc) { %>
                         <div class="place parks fitnesshealth " data-color="#f9c700" data-masonry-options="{"gutter": 30 }">
                             <a href="http://localhost:2007/user/promo/<%= doc._id %>">
             			        <img class="lead-image imgix" src="<%= doc.urlPhoto %>"/>

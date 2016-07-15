@@ -79,12 +79,11 @@ var sess;
           //In this we are assigning email to sess.email variable.
           //email comes from HTML page.
           sess.hash=found.token;
-          console.log("sessionHash: "+sess.hash);
           promo.listPromos(function(encontrado){
           var resultado = encontrado;
+          console.log("EBAY Result: "+encontrado);
           var perfil = found;
           category.listCategories(function(listado){
-                  console.log(listado);
                 var categs = listado;
                   res.render("pages/home",{resultado:encontrado,perfil:found,categs:listado});
                 });
