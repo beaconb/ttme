@@ -1,0 +1,5 @@
+-- funcion pagina de contacto????
+estilo logo
+cargar promos RSS, scrapping, api
+gestion providers (depende del anterior) ebay, amazon, groupon, letsbonus
+contenido pagina about
