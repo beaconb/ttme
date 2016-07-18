@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"respue",
+				"respuesta2"
+			],
+			[
+				"pro",
+				"providerSchema"
+			],
+			[
 				"list",
 				"listPromos"
 			],
@@ -44,10 +52,6 @@
 				"newuser"
 			],
 			[
-				"pro",
-				"promoID"
-			],
-			[
 				"no",
 				"novaArr"
 			],
@@ -84,6 +88,14 @@
 	"buffers":
 	[
 		{
+			"file": "config/promo.js",
+			"settings":
+			{
+				"buffer_size": 1804,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "views/pages/categories.ejs",
 			"settings":
 			{
@@ -92,18 +104,18 @@
 			}
 		},
 		{
-			"file": "config/nodeMailer.js",
+			"file": "routes/routes.js",
 			"settings":
 			{
-				"buffer_size": 851,
+				"buffer_size": 13440,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "package.json",
+			"file": "views/pages/home.ejs",
 			"settings":
 			{
-				"buffer_size": 779,
+				"buffer_size": 4765,
 				"line_ending": "Windows"
 			}
 		}
@@ -145,29 +157,36 @@
 		"/D/mine/trastoo.me/docs",
 		"/D/mine/trastoo.me/public",
 		"/D/mine/trastoo.me/public/images",
+		"/D/mine/trastoo.me/routes",
 		"/D/mine/trastoo.me/views",
 		"/D/mine/trastoo.me/views/pages",
 		"/D/mine/trastoo.me/views/partials"
 	],
 	"file_history":
 	[
+		"/D/mine/trastoo.me/docs/backlog.txt",
+		"/D/mine/trastoo.me/package.json",
+		"/D/mine/trastoo.me/config/providerModel.js",
+		"/D/mine/trastoo.me/docs/providers.json",
+		"/D/mine/trastoo.me/views/pages/categories.ejs",
+		"/D/mine/trastoo.me/config/nodeMailer.js",
+		"/D/mine/trastoo.me/views/pages/about.ejs",
+		"/D/mine/trastoo.me/views/pages/favs.ejs",
+		"/D/mine/trastoo.me/config/promoModel.js",
+		"/D/mine/trastoo.me/config/category.js",
+		"/D/mine/trastoo.me/config/providers.js",
 		"/D/mine/trastoo.me/app.js",
 		"/D/mine/trastoo.me/views/partials/header.ejs",
 		"/D/mine/trastoo.me/views/pages/contacto.ejs",
 		"/D/mine/trastoo.me/routes/routes.js",
 		"/D/mine/trastoo.me/config/login.js",
-		"/D/mine/trastoo.me/config/nodeMailer.js",
 		"/D/mine/trastoo.me/views/pages/home.ejs",
-		"/D/mine/trastoo.me/views/pages/categories.ejs",
 		"/D/mine/trastoo.me/docs/promos.sql",
-		"/D/mine/trastoo.me/config/category.js",
 		"/D/mine/trastoo.me/config/promo.js",
 		"/D/mine/trastoo.me/docs/users.sql",
 		"/D/mine/trastoo.me/views/pages/login.ejs",
-		"/D/mine/trastoo.me/config/promoModel.js",
 		"/D/mine/trastoo.me/config/categoryModel.js",
 		"/D/mine/trastoo.me/views/pages/contactoMensaje.ejs",
-		"/D/mine/trastoo.me/package.json",
 		"/D/mine/trastoo.me/views/pages/userUpdate.ejs",
 		"/D/mine/trastoo.me/views/pages/newUser.ejs",
 		"/D/mine/trastoo.me/views/pages/loginMensaje.ejs",
@@ -175,7 +194,6 @@
 		"/D/mine/trastoo.me/views/pages/promo.ejs",
 		"/D/mine/trastoo.me/docs/icons.css",
 		"/D/mine/trastoo.me/views/partials/head.ejs",
-		"/D/mine/trastoo.me/views/pages/favs.ejs",
 		"/D/mine/trastoo.me/views/styles/colors.ejs",
 		"/D/mine/trastoo.me/config/user2promoModel.js",
 		"/D/mine/trastoo.me/config/user2promo.js",
@@ -192,7 +210,6 @@
 		"/D/mine/trastoo.me/config/register.js",
 		"/D/mine/trastoo.me/views/pages/user.ejs",
 		"/D/mine/trastoo.me/config/userModel.js",
-		"/D/mine/trastoo.me/views/pages/about.ejs",
 		"/D/mine/trastoo.me/routes/ejs/list.ejs",
 		"/D/mine/trastoo.me/routes/login.html",
 		"/D/mine/trastoo.me/routes/index.html",
@@ -263,6 +280,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
 			"name",
 			"pages/categories",
 			"_id",
@@ -321,13 +339,42 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/pages/categories.ejs",
+					"file": "config/promo.js",
 					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1793,
+								1789
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/pages/categories.ejs",
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 4188,
@@ -337,8 +384,8 @@
 						"selection":
 						[
 							[
-								232,
-								232
+								3079,
+								3093
 							]
 						],
 						"settings":
@@ -348,27 +395,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "config/nodeMailer.js",
+					"buffer": 2,
+					"file": "routes/routes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 851,
+						"buffer_size": 13440,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								241,
-								241
+								3142,
+								3142
 							]
 						],
 						"settings":
@@ -378,38 +425,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "package.json",
+					"buffer": 3,
+					"file": "views/pages/home.ejs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 779,
+						"buffer_size": 4765,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								169,
-								169
+								3488,
+								3488
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 585.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -492,7 +541,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 246.0,
+	"side_bar_width": 297.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

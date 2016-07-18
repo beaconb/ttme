@@ -81,7 +81,10 @@ var sess;
           sess.hash=found.token;
           promo.listPromos(function(encontrado){
           var resultado = JSON.parse(encontrado.salida);
-          console.log("EBAY Result: "+resultado.Ack);
+          console.log('resultado '+resultado[0]);
+  //        for ( var r = 0; r < resultado.ItemArray.Item.length ; r ++ ){
+  //          console.log('resultado '+resultado.ItemArray.Item[r].ItemId);
+  //        }
           var perfil = found;
           category.listCategories(function(listado){
                 var categs = listado;
